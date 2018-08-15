@@ -13,3 +13,21 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+// Secondary buttons
+
+.secondary-button-quiet {
+  padding: 8px 10px;
+  border-color: #6f777b;
+  color: #6f777b;
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+.secondary-button-quiet:hover {
+  border-color: #636a6e;
+  color: #636a6e;
+  background-color: #f8f8f8;
+  text-decoration: none;
+  }
