@@ -15,7 +15,43 @@ $govuk-global-styles: true;
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 
-// Secondary buttons
+// Action block
+
+.action-block {
+  background-color: #f8f8f8; 
+  padding: 20px;
+  @include govuk-clearfix;
+}
+
+.action-button {
+  width:100%;
+  display:block;
+}
+
+.secondary-button {
+  padding: 8px 10px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  border-color: #00823b;
+  color: #00823b;
+  background-color: #ffffff;
+  box-shadow: none;
+}
+.secondary-button:link, 
+.secondary-button:visited, 
+.secondary-button:active,
+.secondary-button:focus, {
+    color: #00823b;
+    text-decoration: none;
+    }
+
+
+.secondary-button:hover {
+  border-color: #00692f;
+  color: #00692f;
+  background-color: #f8f8f8;
+  text-decoration: none;
+  }
 
 .secondary-button-quiet {
   padding: 8px 10px;
@@ -30,4 +66,21 @@ $govuk-global-styles: true;
   color: #636a6e;
   background-color: #f8f8f8;
   text-decoration: none;
+  }
+
+.secondary-button-quiet:link, 
+.secondary-button-quiet:visited, 
+.secondary-button-quiet:active,
+.secondary-button-quiet:focus, {
+    color: #6f777b;
+    text-decoration: none;
+    }
+
+
+  .destructive-link, .destructive-link:visited {
+    color: #b10e1e;
+  }
+
+  .destructive-link--right {
+    float: right;
   }
