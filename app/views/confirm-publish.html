@@ -4,6 +4,10 @@
   Content has been published
 {% endblock %}
 
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/">Return to dashboard</a>
+{% endblock %}
+
 {% block content %}
 
     <div class="govuk-grid-row">
@@ -17,18 +21,16 @@
           </div> -->
         </div>
 
-        <p class="govuk-body-l govuk-!-margin-top-6">
-          <span class="govuk-!-font-weight-bold">‘Education standards continue to rise at GCSE and A level’</span> has been published on GOV.UK.
+        <p class="govuk-!-margin-top-6">
+          ‘Education standards continue to rise at GCSE and A level’ has been published on GOV.UK.
         </p>
-
-        <div class="govuk-inset-text">
-          https://www.gov.uk/government/news/education-standards-continue-to-rise-at-gcse-and-a-level
-        </div>
 
         <p class="govuk-body">
           It may take 5 minutes to appear live.
         </p>
-         <p><a href="">Return to dashboard</a></p>
+        <div class="govuk-inset-text">
+          https://www.gov.uk/government/news/education-standards-continue-to-rise-at-gcse-and-a-level
+        </div>
 
       </div>
     </div>
