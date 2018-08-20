@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">News story</span>
+      <h1 class="govuk-heading-xl">
+        Title
+      </h2>
+
+      <h2 class="govuk-heading-m">
+        Title, summary and body      
+        <span class="govuk-body destructive-link--right">
+          <a href="/documents/2/edit">
+            Edit content</span>
+          </a>
+        </span>
+      </h2>
+      <dl class="app-check-your-answers app-check-your-answers--short">
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Title
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            Test
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Summary
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            ;lkjasdf;lkajsdf
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Body
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            weoriukmxfg,oweitudknglrgjt ;ldfja;lkdf;adlkfj; akdjf;adsklfj
+            ad;lfk jadf;kjadfskdjf lskdfjsldkfjsf
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">
+       Tags    
+        <span class="govuk-body destructive-link--right">
+          <a href="/documents/2/edit">
+            Edit tags
+          </a>
+        </span>
+      </h2>
+      <dl class="app-check-your-answers app-check-your-answers--short">
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Primary organisation
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            Government Digital Service
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Organisations
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            Department of Work and Pensions
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Ministers
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            none
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            Topical events
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            none
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question">
+            World locations
+          </dt>
+          <dd class="app-check-your-answers__answer">
+            none
+          </dd>
+        </div>
+      </dl>
+
+    </div>
+    
+    <div class="govuk-grid-column-one-third">
+      <div class="action-block">
+        <form class="form" action="submitted" method="post">
+          <button class="govuk-button action-button">Submit for 2i review</button>
+           <a href="#" role="button" class="govuk-button secondary-button action-button">
+             Preview
+            </a>
+          <p class="govuk-!-margin-bottom-0">
+            <a href="publish" role="button" class="govuk-link govuk-link--no-visited-state">
+             Publish
+            </a>
+            <a href="#" role="button" class="destructive-link destructive-link--right">
+             Delete draft
+            </a>
+          </p>
+        </form> 
+      </div>
+      <div class="action-block govuk-!-margin-top-4">
+        <p><span class="govuk-!-font-weight-bold">Status:</span> Draft</p>
+        <p><span class="govuk-!-font-weight-bold">Last updated:</span> 22 August 2018</p>
+        <p class="govuk-!-margin-bottom-0"><span class="govuk-!-font-weight-bold">Created by:</span> Kostas Kononovas</p>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+{% endblock %}
