@@ -106,24 +106,7 @@
     </div>
     
     <div class="govuk-grid-column-one-third">
-      <div class="action-block ">
-        <form class="form" action="publish-submitted" method="post">
-          <button class="govuk-button action-button">Publish</button>
-          <a href="#" role="button" class="govuk-button secondary-button action-button">
-             Preview
-            </a>
-          <p class="govuk-!-margin-bottom-0">
-            <a href="#" role="button" class="govuk-link govuk-link--no-visited-state destructive-link destructive-link--right">
-             Delete draft
-            </a>
-          </p>
-        </form> 
-      </div>
-      <div class="action-block govuk-!-margin-top-4">
-        <p><span class="govuk-!-font-weight-bold">Status:</span> Submitted for 2i review</p>
-        <p><span class="govuk-!-font-weight-bold">Last updated:</span> 22 August 2018</p>
-        <p class="govuk-!-margin-bottom-0"><span class="govuk-!-font-weight-bold">Created by:</span> Kostas Kononovas</p>
-      </div>
+      {% include "includes/action-block-submitted.html" %}
     </div>
 
     </div>
