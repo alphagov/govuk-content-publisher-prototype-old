@@ -84,3 +84,13 @@ $govuk-global-styles: true;
   .destructive-link--right {
     float: right;
   }
+
+
+  // Preview
+
+  .preview-mobile {
+    height: 85vh;
+  }
+  .preview-google {
+    width: 60vw;
+  }
