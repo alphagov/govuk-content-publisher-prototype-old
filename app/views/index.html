@@ -11,7 +11,7 @@
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
         GOV.UK Content Publisher prototype
-      </h1>{{releaseVersion | log }}
+      </h1>
 
       <ul class="govuk-list govuk-list">
         <li><a href="content-summary-draft">Content summary – Draft</a></li>
@@ -22,10 +22,56 @@
         <li><a href="preview">Preview</a></li>
         
       </ul>
+
       <ul class="govuk-list govuk-list">
         <li><a href="tags">Edit tags</a></li>
       </ul>
     </div>
-</div>
+  </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+              <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+              <h2 class="govuk-heading-m">Changelog</h2>
+
+<!-- Changelog entry v1 – August 2018 -->
+
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    August 2018
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">What we did</th>
+                        <th class="govuk-table__header" scope="col">Why we did it</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row">Publish workflow: Share for 2i, Force publish, Publish</td>
+                        <td class="govuk-table__cell "><p>Publishers need to...</p>
+                          Submit content for 2i review so that other editors know it is ready to check and publish<br />
+                          Publish 2i’d content so that it becomes available to users <br />
+                          Urgently publish content so that it becomes available to users but can be 2i’d thereafter
+                        </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row">Preview by mobile, desktop and google snippet. Shareable link.</td>
+                        <td class="govuk-table__cell "><p>Publishers need to...</p>
+                          Review content so that they  know how it will appear to users <br />
+                          Share draft content with a stakeholder so that they can check it is accurate and approved 
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+              
+            </div>
+          </div>
 
 {% endblock %}
