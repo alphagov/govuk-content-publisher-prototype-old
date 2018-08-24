@@ -11,6 +11,7 @@ $govuk-global-styles: true;
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
+@import "components/autocomplete";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -95,19 +96,25 @@ $govuk-global-styles: true;
     width: 80%;
   }
 
-// Changelog
 
-.changelog-wrapper {
-  border-left: 4px solid #bfc1c3;
-  position: relative;
-  padding: 0 20px;
+.autocomplete__option {
+  @include govuk-font($size: 19);
 }
-
-.changelog-item{
-  list-style: none;
+.app-multiselect__list {
+  list-style-type: none;
   padding: 0;
+  margin: 0;
+  li {
+    @include govuk-font($size: 19);
+    padding: 2px govuk-spacing(1) 0;
+    margin-top: govuk-spacing(2);
+    border: 1px solid $govuk-border-colour;
+    background: govuk-colour("grey-4");
+    a {
+      @include govuk-font($size: 24, $line-height: 1);
+      text-decoration: none;
+      color: $govuk-text-colour;
+      vertical-align: bottom;
+    }
+  }
 }
-
-
-
-
