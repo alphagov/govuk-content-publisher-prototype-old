@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Tags</h1>
+
+      <p>Add tags which describe what the content is about. Content will appear in lists on GOV.UK based on each tag.</p>
+      <form class="form" action="/content-summary-draft" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="primary-organisation">
+            Primary organisation
+          </label>
+          <select class="govuk-select" id="primary-organisation" name="primary-organisation">
+            <option value="dwp">Department for Work and Pension</option>
+            <option value="hmlr" selected>HM Land Registry</option>
+            <option value="dhsc">Department for Health and Social Care</option>
+            <option value="nda">Nuclear Decommissioning Authority</option>
+          </select>
+        </div>        
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="supporting-organisations">
+            Supporting organisations
+          </label>
+          <select class="govuk-select" id="supporting-organisations" name="supporting-organisations">
+            <option></option>
+            <option value="dwp">Department for Work and Pension</option>
+            <option value="hmlr">HM Land Registry</option>
+            <option value="dhsc">Department for Health and Social Care</option>
+            <option value="nda">Nuclear Decommissioning Authority</option>
+          </select>
+          <ul id="supporting-organisations-multiselect-list" class="app-multiselect__list">
+            <li><a href="#remove">&times;</a> Department for Work and Pension</li>
+            <li><a href="#remove">&times;</a> Nuclear Decommissioning Authority</li>
+          </ul>
+        </div>        
+        
+        <button class="govuk-button">Save</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
