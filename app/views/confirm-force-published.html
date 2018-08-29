@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="content-summary-submitted">Return to dashboard</a>
+  <a class="govuk-back-link" href="content-summary-forcepublished">Return to dashboard</a>
 {% endblock %}
 
 {% block content %}
@@ -13,16 +13,23 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-xl">
-          Content has been force published
-        </h1>
-
+       <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+            Content has been force published
+          </h1>
+         <!--  <div class="govuk-panel__body">
+            ‘Xxxxxx xxx xxxxxx XXX xxxxx xx xxxxxxxx’ has been published on GOV.UK
+          </div> -->
+        </div>
         <p>
          ‘Giant crane to bring the Windscale Pile One chimney down’ has been published on GOV.UK.
         </p>
+        <!-- <p class="govuk-body">
+          It may take 5 minutes to appear live.
+        </p> -->
+        <p class="govuk-heading-m">What happens next</p>
         
-        <p>It still needs to be reviewed as soon as possible.</p>
-        
+        <p>It still needs to be 2i reviewed as soon as possible. Send it to another publisher for them to review and approve it.</p>
         <div class="govuk-inset-text">
           https://content-publisher.integration.publishing.service.gov.uk/documents/giant-crane-to-bring-the-windscale-pile-one-chimney-down
         </div>
@@ -30,10 +37,8 @@
         <button type="submit" class="govuk-button secondary-button-quiet">
           Copy link
         </button>
-        <p>Send it to another publisher for them to review and approve it.</p>
-         <p class="govuk-body">
-          It may take 5 minutes to appear live.
-        </p>
+     
+        
 
     </div>
   </div>
