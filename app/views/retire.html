@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Retire
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+     
+      <form class="form" action="#" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Retire
+              </h1>
+            </legend>
+            <p>Retired content means it's no longer current government policy/activity. It will still be available at the same URL.</p>
+            <p>Learn more about retiring content in our <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/unpublishing-and-archiving">publishing guide</a>.</p>
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-font-weight-bold" for="more-detail">
+                Public explanation
+              </label>
+              <span id="more-detail-hint" class="govuk-hint">
+                This is shown on the live site
+              </span>
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Yes, retire this document</button>
+        <p><a href="content-summary-published">Cancel</a></p>
+
+
+      </form>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+      
+      <div class="contextual-guidance">
+        <h2 class="govuk-heading-s">Writing public explanation</h2>
+        <p>You should always leave a reason explaining why you’re withdrawing the content.</p>
+      
+        <p>Give details of newer versions of the page, or help users find related content.</p>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
