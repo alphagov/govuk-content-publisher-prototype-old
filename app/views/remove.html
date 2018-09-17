@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Retire
+  Remove
 {% endblock %}
 
 {% block beforeContent %}
@@ -18,11 +18,12 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-fieldset__heading">
-                Remove
+                Remove this document
               </h1>
             </legend>
 
-            <p>Removing content deletes a piece of content from GOV.UK. Learn more about removing content in our <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/unpublishing-and-archiving">publishing guide</a>.</p>
+            <p>Removed content no longer appears on GOV.UK.</p>
+            <p><a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/unpublishing-and-archiving">Full guidance on retiring or removing content</a></p>
             
             <div class="govuk-radios" data-module="radios">
               <div class="govuk-radios__item">
@@ -84,8 +85,7 @@
           </fieldset>
         </div>
 
-        <button class="govuk-button">Yes, remove this document</button>
-        <p><a href="content-summary-published">Cancel</a></p>
+        <button class="govuk-button">Remove this document</button>
 
       </form>
 
