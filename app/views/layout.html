@@ -43,10 +43,45 @@
 {% endblock %}
 
 {% if useAutoStoreData %}
-  {% block footer %}
-    {{ govukFooter({
-      meta: {
-        items: [
+  {% block footer %}{% from "footer/macro.njk" import govukFooter %}
+
+{% from "footer/macro.njk" import govukFooter %}
+
+{{ govukFooter({
+  navigation: [
+    {
+      columns: 1,
+      items: [
+        {
+          href: "https://support.publishing.service.gov.uk/",
+          text: "Raise a support request"
+        },
+        {
+          href: "feedback",
+          text: "Send us feedback"
+        }
+      ]
+    },
+    {
+      columns: 1,
+      items: [
+        {
+          href: "beta",
+          text: "Beta features we support"
+        },
+        {
+          href: "changelog",
+          text: "Changes and updates"
+        },
+        {
+          href: "https://www.gov.uk/government/content-publishing ",
+          text: "Planning, writing and managing content"
+        }
+      ]
+    }
+  ],
+  meta: {
+    items: [
           {
             href: "https://govuk-prototype-kit.herokuapp.com/",
             text: "GOV.UK Prototype Kit " + releaseVersion
@@ -58,6 +93,7 @@
         ]
       }
     }) }}
+
   {% endblock %}
 {% endif %}
 
