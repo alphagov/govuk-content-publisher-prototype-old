@@ -89,9 +89,37 @@
   }
 
 // Table 
+
   td {
     vertical-align: top;
   }
+
+//
+
+// Navigation
+
+//Left nav
+.left-nav li{
+   border-bottom: 1px solid #bfc1c3;
+   padding: 10px 0;
+   margin-bottom: 0;
+}
+
+.left-nav a{
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.left-nav a:visited {
+    color: #005ea5;
+  }
+
+//Footer
+.govuk-footer__heading {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 
 // Contextual guidance 
 
