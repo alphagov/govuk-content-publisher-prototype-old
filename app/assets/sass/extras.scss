@@ -120,6 +120,113 @@
   margin-bottom: 0;
 }
 
+// App nav
+.app-navigation {
+  display: flex;
+}
+
+.app-navigation-list li{
+  display: inline;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.app-navigation-list ul {
+  display: inline;
+}
+
+.app-navigation-list a:visited {
+    color: #005ea5;
+  }
+
+.notification {
+  color: #f47738;
+  font-size: 19px;
+  padding: 0 0 0 5px;
+  position: relative;
+  top: 2px;
+}
+
+// Modal tooltip
+#modal-tooltip-example #modal {
+  position: relative;
+  z-index: 10;
+  top: 50px;
+  bottom: 0;
+  left: 482px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  visibility: hidden;
+}
+#modal-tooltip-example #modal-content {
+  position: absolute;
+  font-family: "nta", sans-serif;
+  background: black;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  padding: 11px 55px 9px 15px;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+}
+
+#modal-tooltip-example #modal-content:after {
+  content: ".";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: black;
+  color: transparent;
+  overflow: hidden;
+  top: -5px;
+  left: 50%;
+  margin-left: -6px;
+  transform: rotate(45deg);
+}
+#modal-tooltip-example #modal-content .actions {
+  padding: 10px 0;
+}
+
+
+#modal-tooltip-example #modal-content .actions a{
+  color: #fff;
+  text-decoration: underline; 
+  font-weight: bold;
+}
+
+#modal-tooltip-example .close-modal {
+  position: absolute;
+  overflow: hidden;
+  width: 40px;
+  height: 30px;
+  padding: 9px 0 1px;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+}
+#modal-tooltip-example .close-modal:hover {
+  background: #4C2C92;
+}
+#modal-tooltip-example .close-modal:focus {
+  background: orange;
+  outline: none;
+}
+#modal-tooltip-example .close-modal span {
+  position: absolute;
+  top: -100px;
+  left: -1000%;
+}
+#modal-tooltip-example:target #modal-content {
+  display: none;
+}
 
 // Contextual guidance 
 

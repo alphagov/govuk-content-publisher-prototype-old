@@ -38,9 +38,29 @@
     homepageUrl: "/",
     serviceName: serviceName,
     serviceUrl: "/",
-    containerClasses: "govuk-width-container"
+    containerClasses: "govuk-header__container--full-width",
+    navigationClasses: "govuk-header__navigation--end",
+    navigation: [
+    {
+      "href": "#",
+      "text": "Switch app"
+    },
+    {
+      "href": "#",
+      "text": "Kamala Khan"
+    },
+    {
+      "href": "#",
+      "text": "Sign out"
+    }
+  ]
   }) }}
+
+  {% include "includes/app-nav.html" %}
+
 {% endblock %}
+
+
 
 {% if useAutoStoreData %}
   {% block footer %}{% from "footer/macro.njk" import govukFooter %}
