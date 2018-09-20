@@ -8,6 +8,9 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 
+  $('.notification').hover(function(){ $("#modal").css('visibility', 'visible');  })
+  $('.close-modal').click(function(e) { e.preventDefault(); $("#modal").css('visibility', 'hidden'); })
+
   accessibleAutocomplete.enhanceSelectElement({
     defaultValue: '',
     selectElement: document.querySelector('#primary-organisation')
@@ -17,7 +20,7 @@ $(document).ready(function () {
     defaultValue: '',
     selectElement: document.querySelector('#supporting-organisations')
   })
-  
+
   $("#supporting-organisations").on(" keyup", function(e){
     if(e.type=="blur" || e.which == 13) {
       e.preventDefault()
@@ -29,7 +32,7 @@ $(document).ready(function () {
     e.preventDefault()
     addSelection($(e.target).text())
   })
-  
+
   var addSelection = function(selection){
     if (selection) {
       $("#supporting-organisations-multiselect-list").prepend("<li><a href='#remove'>&times;</a> "+selection+"</li>")
@@ -41,6 +44,6 @@ $(document).ready(function () {
     e.preventDefault();
     e.target.parentNode.remove()
   })
-    
+
 })
 
