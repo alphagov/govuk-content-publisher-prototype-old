@@ -256,3 +256,8 @@
     }
   }
 }
+
+.govuk-link--active-page {
+  color: $govuk-text-colour !important;
+  font-weight: bold;
+}
