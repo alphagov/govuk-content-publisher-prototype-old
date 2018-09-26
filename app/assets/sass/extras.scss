@@ -94,7 +94,7 @@
     vertical-align: top;
   }
 
-//
+
 
 // Navigation
 
@@ -114,11 +114,6 @@
     color: #005ea5;
   }
 
-//Footer
-.govuk-footer__heading {
-  border-bottom: none;
-  margin-bottom: 0;
-}
 
 // App nav
 .app-navigation {
@@ -225,6 +220,12 @@
   left: -1000%;
 }
 
+//Footer
+.govuk-footer__heading {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 // Contextual guidance
 
 .contextual-guidance {
@@ -233,7 +234,21 @@
   margin-top: 212px !important;
 }
 
-// Autocomplete
+// Topics 
+
+.topics-multiselect__list li{
+  display: inline;
+}
+
+.tag-seperator {
+  padding: 0 10px; 
+  color:  $govuk-border-colour;
+}
+
+
+// Tags 
+
+//Autocomplete
 
 .autocomplete__option {
   @include govuk-font($size: 19);

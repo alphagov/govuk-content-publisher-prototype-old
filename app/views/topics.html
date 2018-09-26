@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Topics
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="content-summary-draft">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Topics</h1>
+
+      <p>Topics help position this content in GOV.UK, they make it easier to find by relating it to existing content that is similar to it.</p>
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="name">
+            Search topics
+          </label>
+          <input class="govuk-input" id="name" name="name" type="text">
+        </div>
+
+   
+    <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          The changes are made live across the site as soon as you add or remove a topic.
+        </strong>
+      </div>
+
+      <button class="govuk-button">Save topics</button>
+    </div>
+</div>
+
+{% endblock %}
