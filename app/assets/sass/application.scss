@@ -12,6 +12,7 @@ $govuk-global-styles: true;
 // Components that aren't in Frontend
 @import "components/cookie-banner";
 @import "components/autocomplete";
+@import "components/browse";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 

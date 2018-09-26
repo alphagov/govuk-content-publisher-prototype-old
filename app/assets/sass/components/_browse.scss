@@ -1,0 +1,299 @@
+$gutter: 30px;
+$gutter-half: $gutter / 2;
+$gutter-one-third: $gutter / 3;
+$gutter-one-sixth: $gutter / 6;
+$panel-colour: $govuk-link-colour;
+
+// resets
+ul, ol, li { margin: 0; padding: 0; }
+
+// scss-lint:disable NestingDepth
+.browse {
+
+  margin-bottom: 30px;
+
+  .browse-panes {
+    // @extend %contain-floats;
+    padding-bottom: $gutter;
+    position: relative;
+
+    @include mq(tablet) {
+      padding-top: $gutter;
+    }
+
+    &.section {
+      .root-pane {
+        display: none; // hide on mobile
+
+        @include mq(tablet) {
+          display: block;
+          float: right;
+          width: 25%;
+        }
+      }
+
+      .section-pane {
+        @include mq(tablet) {
+          float: right;
+          width: 30%;
+          margin-right: 45%;
+        }
+
+        @include mq(desktop) {
+          width: 35%;
+          margin-right: 40%;
+        }
+      }
+    }
+
+    &.subsection {
+      .root-pane,
+      .section-pane {
+        display: none; // hide on mobile
+
+        @include mq(tablet) {
+          display: block;
+          float: right;
+          width: 25%;
+        }
+
+        color: $govuk-secondary-text-colour;
+
+        a,
+        p {
+          color: $govuk-secondary-text-colour;
+        }
+      }
+
+      .section-pane {
+        @include mq(tablet) {
+          margin-left: -18%;
+          width: 30%;
+        }
+
+        @include mq(desktop) {
+          margin-left: -13%;
+          width: 25%;
+        }
+      }
+
+      .subsection-pane {
+        @include mq(tablet) {
+          float: right;
+          width: 50%;
+          margin-right: 13%;
+        }
+      }
+    }
+
+    .pane-inner {
+      padding-bottom: $gutter;
+
+      @include mq(tablet) {
+        border-left: 1px solid $govuk-border-colour;
+        min-height: 950px;
+      }
+
+      @include mq(desktop) {
+        min-height: 700px;
+      }
+    }
+
+    h1,
+    h2 {
+      @include govuk-font($size: 27, $weight: bold)
+      margin-bottom: $gutter-one-third;
+      margin-top: $gutter-one-third;
+      outline: none;
+
+      @include mq(tablet) {
+        margin-top: 0;
+        margin-bottom: $gutter-half;
+      }
+    }
+
+    .root-pane,
+    .section-pane {
+      min-height: 20px;
+
+      h1,
+      h2 {
+        @include mq(tablet) {
+          padding-left: $gutter-half;
+        }
+      }
+
+      .sort-order {
+        display: none;
+      }
+
+      ul li {
+        list-style: none;
+        position: relative;
+      }
+
+      ul a {
+        position: relative;
+        display: block;
+        @include govuk-font($size: 19)
+        text-decoration: none;
+        padding: 12px 25px 8px 0;
+
+        @include mq(tablet) {
+          padding: 12px $gutter 8px $gutter-half;
+          @include govuk-font($size: 16)
+        }
+
+        &:hover {
+          background: $panel-colour;
+          color: $govuk-link-colour;
+        }
+
+        &:after {
+          position: absolute;
+          top: 50%;
+          margin-top: -8px;
+          right: $gutter-one-third;
+          float: right;
+          content: "\203A";
+        }
+
+        &.loading {
+          cursor: default;
+          background: transparent image-url("loading.gif") 95% 50% no-repeat;
+
+          &:after {
+            content: "";
+          }
+        }
+
+        h3 {
+          font-weight: bold;
+        }
+
+        p {
+          color: $govuk-text-colour;
+          @include govuk-font($size: 14)
+        }
+      }
+
+      ul .active a {
+        background: $govuk-link-colour;
+        color: govuk-colour("white");
+
+        &:hover {
+          background: $govuk-link-colour;
+        }
+
+        p {
+          color: govuk-colour("white");
+        }
+      }
+    }
+
+    .section-pane {
+      z-index: 2;
+      background: govuk-colour("white");
+      position: relative;
+
+      @include mq(desktop) {
+        &.with-sort {
+          .pane-inner {
+            padding-left: $gutter;
+          }
+
+          .pane-inner.alphabetical {
+            padding-left: 96px;
+          }
+
+          .sort-order {
+            @include govuk-font($size: 27, $weight: bold)
+            float: left;
+            display: block;
+            width: 75px;
+            margin-left: -90px;
+            padding: 11px 0 $gutter-half $gutter-half;
+          }
+        }
+      }
+    }
+
+    .subsection-pane {
+      @include mq(tablet) {
+        .pane-inner {
+          &.a-to-z {
+            padding-left: 100px;
+          }
+
+          &.curated-list {
+            padding-left: $gutter;
+          }
+        }
+      }
+
+      h1 {
+        padding-left: 0;
+      }
+
+      .list-header {
+        @include govuk-font($size: 19, $weight: bold)
+        margin: $gutter 0 0 0;
+      }
+
+      .curated-list {
+        .list-header {
+          margin: $gutter 0 $gutter-one-sixth 0;
+        }
+      }
+
+      .sort-order {
+        display: none;
+
+        @include mq(tablet) {
+          display: block;
+          @include govuk-font($size: 27, $weight: bold)
+          float: left;
+          width: 75px;
+          margin-left: -100px;
+          padding: 11px 0 $gutter-half $gutter-half;
+        }
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      ul li {
+        padding: 0;
+        margin: 0;
+      }
+
+      ul li a {
+        @include govuk-font($size: 19)
+        display: block;
+        text-decoration: none;
+        padding: $gutter-one-third $gutter $gutter-one-third 0;
+      }
+
+      .curated-list {
+        ul li a {
+          padding: $gutter-one-sixth $gutter $gutter-one-sixth 0;
+        }
+      }
+
+      .detailed-guidance {
+        margin-top: $gutter;
+      }
+    }
+  }
+  @include govuk-clearfix;
+}
+// overwrites
+.browse .browse-panes .root-pane ul a:hover,
+.browse .browse-panes .section-pane ul a:hover {
+  background: #dee0e2;
+}
+
+
+// scss-lint:enable NestingDepth
