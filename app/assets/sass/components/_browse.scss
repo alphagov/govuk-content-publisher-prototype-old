@@ -294,6 +294,13 @@ ul, ol, li { margin: 0; padding: 0; }
 .browse .browse-panes .section-pane ul a:hover {
   background: #dee0e2;
 }
+.root-pane ul {
+  border-right: 1px solid #dee0e2;
+}
+
+.section-pane ul {
+  border-right: 0;
+}
 
 
 // scss-lint:enable NestingDepth
