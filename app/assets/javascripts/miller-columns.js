@@ -233,7 +233,7 @@
 
 $('.app-miller-columns').millerColumns({
   current: function ($item) {
-    if ($item) $item.find('a').focus()
+    // if ($item) $item.find('input').attr('checked', 'checked')
     // console.log( 'User selected:', $item )
   }
 })

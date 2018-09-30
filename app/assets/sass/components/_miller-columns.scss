@@ -3,17 +3,16 @@
   width: 100%;
   height: 100%;
   margin-bottom: 30px;
-  float: left;
   overflow: auto;
+  outline: 0;
   white-space: nowrap;
-  @include govuk-focusable;
-  @include govuk-clearfix;
 }
 
 // Display the lists as columns in blocks.
 .app-miller-column {
   display: inline-block;
   width: 33%;
+  height: 818px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -26,7 +25,8 @@
 .app-miller-column--narrow {
   width: 13%;
 
-  a {
+  a,
+  label {
     white-space: nowrap;
   }
 }
@@ -34,7 +34,8 @@
 .app-miller-column--medium {
   width: 20%;
 
-  a {
+  a,
+  label {
     white-space: nowrap;
   }
 }
@@ -48,14 +49,16 @@
 .app-miller-column > li {
   min-width: 10em;
   list-style: none;
+  cursor: pointer;
   // padding: 0.5em;
 }
 
-.app-miller-column > li.parent a:after {
+.app-miller-column > li.parent a:after,
+.app-miller-column > li.parent .govuk-checkboxes__item:after {
   content: "\203A";
   position: absolute;
   top: 50%;
-  right: $gutter-one-third;
+  right: 5px;
   margin-top: -8px;
   float: right;
 }
@@ -75,6 +78,11 @@
 }
 
 .app-miller-column {
+  li {
+    padding: 3px 3px 9px 9px;
+    color: $govuk-text-colour;
+  }
+
   a {
     display: block;
     position: relative;
@@ -98,17 +106,18 @@
   }
 
 
+  .govuk-checkboxes__label {
+    @include govuk-font($size: 16)
+  }
+
   .selected {
-    .govuk-checkboxes__item {
-      .govuk-checkboxes__label {
-        // @include govuk-font($size: 16)
-      }
-    }
-
     .govuk-checkboxes__label {
-      color: #fff;
+      color: white;
     }
 
+    .govuk-checkboxes__label::after {
+      opacity: 1;
+    }
   }
 }
 
@@ -121,9 +130,14 @@
 
 .app-breadcrumb > *:after {
   content: " › ";
+  margin: 0 5px;
   color: #6f777b;
 }
 
 .app-breadcrumb > *:last-child:after {
   content: "";
+}
+
+.selected-topics {
+  margin-bottom: 30px;
 }
