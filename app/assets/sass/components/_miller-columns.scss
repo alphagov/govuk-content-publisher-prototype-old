@@ -1,0 +1,138 @@
+.app-topics {
+  margin-bottom: 30px;
+  @include govuk-clearfix;
+}
+
+/* Cascading columns styling. */
+.app-miller-columns {
+  float: left;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  @include govuk-focusable;
+}
+
+/* Display the lists as columns in blocks. */
+ul.app-miller-column {
+  display: inline-block;
+  width: 33%;
+
+  vertical-align: top;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  border-right: 1px solid #dee0e2;
+  white-space: normal;
+  transition: 400ms;
+}
+
+ul.app-miller-column--narrow {
+  width: 13%;
+
+  a {
+    white-space: nowrap;
+  }
+}
+
+ul.app-miller-column--medium {
+  width: 20%;
+
+  a {
+    white-space: nowrap;
+  }
+}
+
+/* Setting a list container class to "collapsed" will hide the column. */
+ul.app-miller-column.collapse {
+  display: none;
+}
+
+/* Put some space between the column's list entries. */
+ul.app-miller-column > li {
+  list-style: none;
+  // padding: 0.5em;
+  min-width: 10em;
+}
+
+ul.app-miller-column > li.parent a:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: $gutter-one-third;
+  float: right;
+  content: "\203A";
+}
+
+/* Highlight while hovering, without allowing selected items to override. */
+ul.app-miller-column > li:hover {
+  color: black;
+  background-color: #dee0e2;
+}
+
+/* Ensure all selected nodes in the hierarchy are easily seen. */
+.app-miller-column > .selected,
+.app-miller-column > .selected:hover,
+.app-miller-column > .selected a {
+  background-color: $panel-colour;
+  color: white;
+}
+
+ul.app-miller-column {
+  a {
+    position: relative;
+    display: block;
+    @include govuk-font($size: 16)
+    text-decoration: none;
+    padding: 12px 25px 8px 0;
+
+    @include mq(tablet) {
+      padding: 12px $gutter 8px $gutter-half;
+    }
+
+    &:hover {
+      background-color: #dee0e2;
+      color: $govuk-link-colour;
+    }
+
+    &.selected {
+      background-color: $panel-colour;
+      color: white;
+    }
+  }
+
+
+  .selected {
+    .govuk-checkboxes__item {
+      .govuk-checkboxes__label {
+        // @include govuk-font($size: 16)
+      }
+    }
+
+    .govuk-checkboxes__label {
+      color: #fff;
+    }
+
+  }
+}
+
+/**
+ *
+ * Breadcrumb styling.
+ *
+ */
+.app-breadcrumb {
+  border-bottom: 1px solid #dee0e2;
+  border-top: 1px solid #dee0e2;
+  padding: 10px 0;
+}
+
+.app-breadcrumb > *:after {
+  content: " › ";
+  color: #6f777b;
+}
+
+.app-breadcrumb > *:last-child:after {
+  content: "";
+}
