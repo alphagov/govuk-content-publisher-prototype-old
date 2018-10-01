@@ -181,6 +181,9 @@ ul, ol, li { margin: 0; padding: 0; }
         background: $govuk-link-colour;
         color: govuk-colour("white");
 
+        &:visited {
+          color: govuk-colour("white");
+        }
         &:hover {
           background: $govuk-link-colour;
         }
