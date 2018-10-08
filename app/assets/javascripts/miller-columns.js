@@ -36,9 +36,16 @@
     $column.parent().addClass('app-miller-column--level-' + level)
 
     // Option 1: Resize root columns
-    if (level > 1) {
+    if (level === 2) {
       $('.app-miller-column--level-0').addClass('app-miller-column--narrow')
-      $('.app-miller-column--level-1').addClass('app-miller-column--medium')
+      $('.app-miller-column--level-1').removeClass('app-miller-column--narrow').addClass('app-miller-column--medium')
+      $('.app-miller-column--level-2').removeClass('app-miller-column--narrow')
+      $('.app-miller-column--level-3').removeClass('app-miller-column--medium')
+    } else if (level > 2) {
+      $('.app-miller-column--level-0').addClass('app-miller-column--narrow')
+      $('.app-miller-column--level-1').removeClass('app-miller-column--medium').addClass('app-miller-column--narrow')
+      $('.app-miller-column--level-2').addClass('app-miller-column--narrow')
+      $('.app-miller-column--level-3').addClass('app-miller-column--medium')
     } else {
       $('.app-miller-column--narrow').removeClass('app-miller-column--narrow')
       $('.app-miller-column--medium').removeClass('app-miller-column--medium')
