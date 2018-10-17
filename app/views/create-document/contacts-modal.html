@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit ‘Untitled document’
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="content-summary-draft">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds blur">
+
+      <h1 class="govuk-heading-l">New news story</h1>
+      <form>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-font-weight-bold" for="title">
+              Title
+            </label>
+            <textarea class="govuk-textarea" id="title" name="title" rows="2" aria-describedby="more-detail-hint"></textarea>
+          </div>
+    
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-font-weight-bold" for="summary">
+              Summary
+            </label>
+            <textarea class="govuk-textarea" id="summary" name="summary" rows="4" aria-describedby="more-detail-hint"></textarea>
+          </div>
+    
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-font-weight-bold" for="body">
+              Body
+            </label>
+            <textarea class="govuk-textarea" id="body" name="body" rows="30" aria-describedby="more-detail-hint"></textarea>
+          </div>
+          <button class="govuk-button">Save</button>
+      </form>
+    </div>
+
+    <div id="modal-dialogue-contacts" class="example">
+      <div id="modal">
+        <div id="modal-content">
+          <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m govuk-!-margin-top-4" for="primary-organisation">
+            Search contacts
+          </label>
+          <select class="govuk-select" id="primary-organisation" name="primary-organisation">
+            <option value="dwp">Department for Work and Pension</option>
+            <option value="hmlr" selected>Department for Transport</option>
+            <option value="dhsc">Department for Health and Social Care</option>
+            <option value="nda">Nuclear Decommissioning Authority</option>
+          </select>
+        </div>
+        <div class="govuk-inset-text">
+          <p>Department for Transport <br/>
+             Victoria Street <br/> 
+             London</p>
+        </div>
+          <div class="actions">
+            
+            <button class="govuk-button">Add contact</button>
+          </div>
+          <a class="close-modal" href="#modal-tooltip-example">&times;<span>Close<span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

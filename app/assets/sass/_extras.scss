@@ -143,6 +143,7 @@
 }
 
 // Modal tooltip
+
 #modal-tooltip-example #modal {
   position: relative;
   z-index: 10;
@@ -219,6 +220,187 @@
   top: -100px;
   left: -1000%;
 }
+
+//Modal popup
+
+//Inline image
+
+.blur {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.image-example {
+  width: 80%;
+}
+
+#modal-dialogue-image #modal {
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px) contrast(90%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#modal-dialogue-image #modal-content {
+  position: relative;
+  font-family: "nta", sans-serif;
+  background: #fff;
+  border: 2px solid #000;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  padding: 40px 15px 15px 15px;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+  width: 800px;
+  height: 600px;
+  box-sizing: border-box;
+}
+
+#modal-dialogue-image #modal-content:before {
+  content: ".";
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 38px;
+  background-size: 30px 27px;
+  background-position: 14px 10px;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+#modal-dialogue-image .close-modal {
+  position: absolute;
+  overflow: hidden;
+  width: 40px;
+  height: 30px;
+  padding: 9px 0 1px;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 24px;
+}
+
+#modal-dialogue-image #modal-content h2{
+  margin-top: 20px;
+}
+#modal-dialogue-image #modal-content .actions {
+  margin-top: 20px;
+}
+
+#modal-dialogue-image .close-modal:hover {
+  background: #4C2C92;
+}
+#modal-dialogue-image .close-modal:focus {
+  background: orange;
+  outline: none;
+}
+#modal-dialogue-image .close-modal span {
+  position: absolute;
+  top: -100px;
+  left: -1000%;
+}
+#modal-dialogue-image:target #modal-content {
+  display: none;
+}
+
+//Contacts
+#modal-dialogue-contacts #modal {
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#modal-dialogue-contacts #modal-content {
+  position: relative;
+  font-family: "nta", sans-serif;
+  background: #fff;
+  border: 2px solid #000;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  padding: 40px 15px 15px 15px;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+  width: 400px;
+  max-height: 600px;
+  box-sizing: border-box;
+}
+
+#modal-dialogue-contacts #modal-content:before {
+  content: ".";
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 38px;
+  background-size: 30px 27px;
+  background-position: 14px 10px;
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+#modal-dialogue-contacts .close-modal {
+  position: absolute;
+  overflow: hidden;
+  width: 40px;
+  height: 30px;
+  padding: 9px 0 1px;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 24px;
+}
+
+#modal-dialogue-contacts #modal-content h2{
+  margin-top: 20px;
+}
+#modal-dialogue-contacts #modal-content .actions {
+  margin-top: 20px;
+}
+
+#modal-dialogue-contacts .close-modal:hover {
+  background: #4C2C92;
+}
+#modal-dialogue-contacts .close-modal:focus {
+  background: orange;
+  outline: none;
+}
+#modal-dialogue-contacts .close-modal span {
+  position: absolute;
+  top: -100px;
+  left: -1000%;
+}
+#modal-dialogue-contacts:target #modal-content {
+  display: none;
+}
+
 
 //Footer
 .govuk-footer__heading {
