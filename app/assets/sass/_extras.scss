@@ -142,6 +142,61 @@
   top: 2px;
 }
 
+//Markdown editor
+.preview-toggle {
+  height: 40px;
+  margin: 0 2px;
+  position: relative;
+  top: 114px;
+  background-color: #dee0e2;
+  border-bottom: 2px solid #bfc1c3;
+}
+
+.preview-toggle a{
+  display: inline;
+  line-height: 2.1;
+  margin-left: 10px;
+  font-size: 19px;
+}
+
+.preview-toggle .active {
+  background-color: #f8f8f8;
+  padding: 6px 10px 10px 10px;
+  border-right: 2px solid #bfc1c3;
+  margin: 0;
+  text-decoration: none;
+  color: #000;
+}
+
+.markdown-editor {
+  height: 40px;
+  margin: 0 2px;
+  position: relative;
+  top: 114px;
+  background-color: #f8f8f8;
+}
+
+.markdown-editor img{
+  height: 40px;
+  position: relative;
+}
+
+.markdown-editor a {
+  postion: relative;
+  text-align: right;
+  text-decoration: none;
+  color: #000;
+}
+
+.insert-dropdown img{
+  height: 125px;
+  position: absolute;
+  left: 676px;
+  top: 680px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid    #bfc1c3 ;
+}
+
 // Modal tooltip
 
 #modal-tooltip-example #modal {
