@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit ‘Untitled document’
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="content-summary-draft">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="create-document">
+        <label class="govuk-label" for="primary-organisation">
+          <h1 class="govuk-heading-l">Search contacts</h1>
+        </label>
+  
+        <select class="govuk-select" id="primary-organisation" name="primary-organisation">
+          <option value="dwp">Department for Work and Pension</option>
+          <option value="hmlr" selected>Department for Transport</option>
+          <option value="dhsc">Department for Health and Social Care</option>
+          <option value="nda">Nuclear Decommissioning Authority</option>
+        </select>
+  
+        <div class="govuk-inset-text">
+          <p>Department for Transport <br/>
+             Victoria Street <br/> 
+             London</p>
+        </div>
+        <button class="govuk-button">Add contact</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

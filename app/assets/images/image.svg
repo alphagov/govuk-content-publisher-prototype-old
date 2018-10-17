@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #010101;
+      }
+    </style>
+  </defs>
+  <title>image</title>
+  <g>
+    <rect class="cls-1" width="38" height="38"/>
+    <g>
+      <path class="cls-2" d="M27,12.66l-16,0,0,13,16,0Zm-1,1,0,10.39-3.51-3.62-2.06,2,1.76,2.21H21.3l-5.53-6.81L12,22.53l0-8.84Z"/>
+      <circle class="cls-2" cx="22.5" cy="17.43" r="1.5" transform="translate(-0.04 0.05) rotate(-0.14)"/>
+    </g>
+  </g>
+</svg>
