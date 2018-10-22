@@ -254,19 +254,23 @@
   </div>
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-
-      <div class="govuk-warning-text govuk-!-margin-bottom-6">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning</span>
-          Changes are applied to a live page as soon as you save. <br/>This document will appear on topic pages before you publish a new edition.
-        </strong>
+    <div class="govuk-grid-column-two-thirds">
+    <form action="content-summary-draft-topic" method="post">
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Changes are applied to a live page as soon as you save. 
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+        If this content has already been published and you add new topics, then the last published edition will appear on those topic pages immediately, before you publish a new edition.
       </div>
+      </details>
 
       <div class="govuk-form-group">
         <button class="govuk-button">Save topics</button>
       </div>
+    </form>
     </div>
   </div>
 </div>

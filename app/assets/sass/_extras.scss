@@ -1,3 +1,4 @@
+
 // Action block
 
 .action-block {
@@ -93,6 +94,13 @@
   td {
     vertical-align: top;
   }
+
+// Taxonomy
+
+.taxonomy-chevron {
+  color: #6f777b;
+  padding: 0 5px;
+}
 
 
 
@@ -217,8 +225,9 @@
   position: absolute;
   font-family: "nta", sans-serif;
   background: black;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 16px;  
+  letter-spacing: .3px;
   line-height: 20px;
   color: white;
   padding: 11px 55px 9px 15px;
