@@ -12,29 +12,11 @@
       <h1 class="govuk-heading-xl">
         GOV.UK Content Publisher prototype
       </h1>
-      <h2 class="govuk-heading-s">Content summary</h2>
-      <ul class="govuk-list govuk-list">
-        <li><a href="content-summary-draft">Draft</a></li>
-        <li><a href="content-summary-submitted">Submitted for 2i review</a></li>
-        <li><a href="content-summary-forcepublished">Published but needs 2i review</a></li>
-        <li><a href="content-summary-published">Published</a></li>
-      </ul>
-
-      <h2 class="govuk-heading-s">Publishing workflow</h2>
-      <ul class="govuk-list govuk-list">
-        <li><a href="preview">Preview</a></li>
-        <li><a href="retire">Retire</a></li>
-        <li><a href="remove">Remove</a></li>
-      </ul>
+      <h2 class="govuk-heading-s"><a href="content-summary-draft">Content summary</a></h2>
 
       <ul class="govuk-list govuk-list">
-        <li><a href="tags">Edit tags</a></li>
-        <li><a href="topics">Edit topics</a></li>
-      </ul>
-
-      <ul class="govuk-list govuk-list">
-        <li><a href="create-document/contacts">Insert contacts</a></li>
-        
+        <li><a href="create-document/contacts-modal">Insert contacts</a></li>
+        <li><a href="create-document/inline-image-modal">Insert inline image</a></li>
       </ul>
 
       <h2 class="govuk-heading-s">User support funcionality</h2>
@@ -49,7 +31,36 @@
     <div class="govuk-grid-column-full">
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
       <h2 class="govuk-heading-m">Changelog</h2>
-<!-- Changelog entry v2 – Sept 2018 -->
+
+<!-- Changelog entry v3 – Nov 2018 -->
+     
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            November 2018
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">What we did</th>
+                <th class="govuk-table__header" scope="col">Why we did it</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" width="40%" scope="row"><a href="contacts-modal">Change contacts and inline image to modal</a>
+                </td>
+                <td class="govuk-table__cell">Inserting markdown with in a new page requires saving the page, so if there are validation issues, the user gets an error.<br/>It also reloads the page, so the markdown is inserted at the bottom of the textarea and the textarea isn’t focused.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+<!-- Changelog entry v2 – Oct 2018 -->
+     
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
@@ -79,7 +90,8 @@
           </table>
         </div>
       </details>
-<!-- Changelog entry v2 – Sept 2018 -->
+
+<!-- Changelog entry v1 – Sept 2018 -->
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
@@ -134,7 +146,7 @@
         </div>
       </details>
 
-<!-- Changelog entry v1 – August 2018 -->
+<!-- Changelog entry v0 – August 2018 -->
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
