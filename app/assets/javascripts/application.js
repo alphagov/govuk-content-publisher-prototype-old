@@ -51,3 +51,33 @@ $(document).ready(function () {
     })
   }
 })
+
+// Toggle to show internal note 
+
+  var toggles = Array.prototype.slice.call(document.querySelectorAll('.target-to-show--toggle'))
+
+  if (toggles) {
+    toggles.forEach(toggle => {
+      var allToggleTargets = Array.prototype.slice.call(document.getElementsByClassName('target-to-show'))
+      var toggleTarget = document.getElementById(toggle.getAttribute('href').split('#')[1])
+      var cancel = Array.prototype.slice.call(toggleTarget.getElementsByClassName('target-to-show--cancel'))[0]
+      var toggleContainer = Array.prototype.slice.call(document.getElementsByClassName('target-to-show--toggle-container'))[0]
+
+      toggle.addEventListener('click', e => {
+        e.preventDefault()
+        allToggleTargets.forEach(target => {
+          target.style.display = 'none'
+        })
+        toggleTarget.style.display = 'block'
+        if (toggleContainer) toggleContainer.style.display = 'none'
+      }, false)
+
+      if (cancel) {
+        cancel.addEventListener('click', e => {
+          e.preventDefault()
+          toggleTarget.style.display = 'none'
+          if (toggleContainer) toggleContainer.style.display = 'block'
+        }, false)
+    }
+  })
+}

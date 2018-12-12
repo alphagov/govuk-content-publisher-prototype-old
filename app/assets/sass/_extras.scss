@@ -1,3 +1,13 @@
+//Content summary 
+
+// Tabs 
+.govuk-tabs-nobox section{
+  border: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+
 
 // Action block
 
@@ -76,6 +86,27 @@
     margin-bottom: 40px;
   }
 
+  // Internal notes
+
+  .target-to-show {
+  display: none;
+  position: relative;
+
+  &:target {
+    display: block;
+  }
+
+  .govuk-button {
+    margin-bottom: govuk-spacing(2);
+  }
+
+  &--cancel {
+    position: absolute;
+    right: govuk-spacing(3);
+    bottom: govuk-spacing(3);
+  }
+}
+
 
   // Preview
 
@@ -95,18 +126,11 @@
     vertical-align: top;
   }
 
-// Taxonomy
-
-.taxonomy-chevron {
-  color: #6f777b;
-  padding: 0 5px;
-}
-
-
 
 // Navigation
 
 //Left nav
+
 .left-nav li{
    border-bottom: 1px solid #bfc1c3;
    padding: 10px 0;
@@ -124,6 +148,7 @@
 
 
 // App nav
+
 .app-navigation {
   display: flex;
 }
@@ -496,6 +521,13 @@
 .tag-seperator {
   padding: 0 10px;
   color:  $govuk-border-colour;
+}
+
+// Taxonomy
+
+.taxonomy-chevron {
+  color: #6f777b;
+  padding: 0 5px;
 }
 
 
