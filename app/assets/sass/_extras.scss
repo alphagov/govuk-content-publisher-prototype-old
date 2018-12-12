@@ -71,8 +71,8 @@
     }
 
 
-  .destructive-link, .destructive-link:visited {
-    color: #b10e1e;
+  .destructive-link, .destructive-link:visited, .destructive-link:active{
+    color:  #b10e1e !important;
   }
 
   .destructive-link--right {
