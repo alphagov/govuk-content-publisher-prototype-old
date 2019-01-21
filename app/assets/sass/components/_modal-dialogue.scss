@@ -38,6 +38,7 @@
   width: 960px;
   height: 600px;
   box-sizing: border-box;
+  @include govuk-focusable;
 }
 
 #modal-dialogue-image #modal-content:before {
@@ -78,7 +79,7 @@
 }
 
 #modal-dialogue-image .close-modal:hover {
-  background: #4C2C92;
+  background: #ffbf47;
 }
 #modal-dialogue-image .close-modal:focus {
   background: orange;
@@ -121,6 +122,7 @@
   width: 607.983px;
   height: 480px;
   box-sizing: border-box;
+  @include govuk-focusable;
 }
 
 #modal-dialogue-contacts #modal-content:before {
@@ -154,11 +156,12 @@
 }
 
 #modal-dialogue-contacts .close-modal:hover {
-  background: #4C2C92;
+  color: govuk-colour('black');
+  background: #ffbf47;
 }
 #modal-dialogue-contacts .close-modal:focus {
+  color: govuk-colour('black');
   background: #ffbf47;
-  outline: none;
 }
 #modal-dialogue-contacts .close-modal span {
   position: absolute;
