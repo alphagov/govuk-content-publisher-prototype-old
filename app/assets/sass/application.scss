@@ -15,7 +15,8 @@ $govuk-global-styles: true;
 @import "components/browse";
 @import "components/miller-columns";
 @import "components/checkbox-small";
+@import "components/modal-dialogue";
+@import "components/tooltip";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-
 @import "extras";

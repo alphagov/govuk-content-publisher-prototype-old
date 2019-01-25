@@ -10,7 +10,21 @@ $(document).ready(function () {
 
   // Tooltip
   $('.notification').hover(function () { $('#modal').css('visibility', 'visible') })
-  $('.close-modal').click(function (e) { e.preventDefault(); $('#modal').css('visibility', 'hidden') })
+
+  // Modal
+  if (document.querySelector('.close-modal')){
+    document.querySelector('.govuk-header').classList.add('blur');
+    document.querySelector('.app-navigation').classList.add('blur');
+    document.querySelector('.govuk-footer').classList.add('blur');
+    document.querySelector('body').style.overflow = 'hidden';
+
+    $('.close-modal').click(function (e) {
+      e.preventDefault();
+      $('#modal').css('visibility', 'hidden');
+      document.querySelectorAll('.blur').forEach(function(item){ item.classList.remove('blur')})
+      document.querySelector('body').style.overflow = 'scroll';
+    })
+  }
 
   // Autocomplete
   if ($('#primary-organisation').length) {
@@ -52,7 +66,7 @@ $(document).ready(function () {
   }
 })
 
-// Toggle to show internal note 
+// Toggle to show internal note
 
   var toggles = Array.prototype.slice.call(document.querySelectorAll('.target-to-show--toggle'))
 
