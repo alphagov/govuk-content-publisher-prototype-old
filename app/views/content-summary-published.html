@@ -14,6 +14,24 @@
   <div class="govuk-grid-column-two-thirds">
   {% include "includes/content-summary-title.html" %}
   </div>
+   <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items related-navigation" role="complementary">
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="#">
+             View published edition on GOV.UK
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="#">
+              View data on this page
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
 </div>
 
 
@@ -37,13 +55,12 @@
     <div class="govuk-grid-row">
 
       <div class="govuk-grid-column-two-thirds">
-        <div class="success-summary">
+        <!-- <div class="success-summary">
 
           <h2 class="govuk-heading-m govuk-!-margin-bottom-0">Content has been reviewed and approved</h2>
-          <!-- <p class="govuk-!-margin-bottom-0">Send this webpage to another publisher for them to review. When content is ready you or they can publish it.
-          </p> -->
 
-        </div>
+
+        </div> -->
 
         {% include "includes/content-summary-body.html" %}
       </div>
