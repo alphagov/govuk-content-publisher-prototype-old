@@ -42,30 +42,30 @@
         <div id="modal">
 
           <div id="modal-content" tabindex="1">
-            <h1 class="govuk-heading-l govuk-!-margin-top-4" for="video-web-address">Add video</h1>
+            <h1 class="govuk-heading-l govuk-!-margin-top-4" for="video-web-address">Embed YouTube video</h1>
             <p>
-              Youtube videos will be embedded in the document. Other video sources will be shown as links. 
+              Only YouTube videos can be embedded on GOV.UK. <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown#video">Full guidance on videos on GOV.UK.</a> 
             </p>
             <form>
               <div class="govuk-form-group">
                 <label class="govuk-label govuk-!-font-weight-bold" for="summary">
-                  Title
+                  Video title
                 </label>
                 <input class="govuk-input govuk-input--width-12" id="video-title" name="video-title" type="text" aria-describedby="video-title-hint">
               </div>
               <div class="govuk-form-group">
                 <label class="govuk-label govuk-!-font-weight-bold" for="video-web-address">
-                  Video web address (URL)
+                  YouTube video web address
                 </label>
                 <span id="video-web-address-hint" class="govuk-hint">
-                  The URL of the YouTube page that shows the video for watching. Don’t use the embed code or the ‘Share this video’ URL.
+                  Links should start: https://www.youtube.com/watch
                 </span>
                 <input class="govuk-input govuk-input--width-12" id="video-web-address" name="video-web-address" type="text" aria-describedby="video-web-address-hint">
               </div>
             </form>
 
           <div class="actions">
-            <button class="govuk-button">Insert video</button>
+            <button class="govuk-button">Embed video</button>
             
             <a class="close-modal" href="#modal-tooltip-example">&times;<span>Close<span></a>
           </div>
