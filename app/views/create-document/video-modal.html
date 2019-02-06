@@ -46,7 +46,7 @@
             <p>
               Only YouTube videos can be embedded on GOV.UK. <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown#video">Full guidance on videos on GOV.UK.</a> 
             </p>
-            <form>
+            <form action="create-document">
               <div class="govuk-form-group">
                 <label class="govuk-label govuk-!-font-weight-bold" for="summary">
                   Video title
@@ -61,14 +61,15 @@
                   Links should start: https://www.youtube.com/watch
                 </span>
                 <input class="govuk-input govuk-input--width-12" id="video-web-address" name="video-web-address" type="text" aria-describedby="video-web-address-hint">
+              </div> 
+              <div class="actions">
+                <button class="govuk-button">Embed video</button>
+                
+                <a class="close-modal" href="#modal-tooltip-example">&times;<span>Close<span></a>
               </div>
             </form>
 
-          <div class="actions">
-            <button class="govuk-button">Embed video</button>
-            
-            <a class="close-modal" href="#modal-tooltip-example">&times;<span>Close<span></a>
-          </div>
+         
 
         </div>
       </div>
