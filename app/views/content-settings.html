@@ -12,20 +12,38 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-xl">Content settings
-      </h1>
-
+      <h1 class="govuk-heading-xl">Content settings</h1>
+        
       <form class="form" action="content-summary-draft-topic" method="post">
+        
+        <!-- <div class="govuk-form-group">
+
+          <label class="govuk-label govuk-!-font-weight-bold" for="name">
+            Subject matter expert
+          </label>
+           <span class="govuk-hint">Policy person or team who must check the accuracy of this content </span>
+          <input class="govuk-input" id="name" name="name" type="text">
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
+
         <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">
+            Backdate old content
+          </h2>
+          <p>If content has previously been available on another website you must set the original publication date back to when it was first published online.</p>
+
           <fieldset class="govuk-fieldset" aria-describedby="date-hint" role="group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              <h2 class="govuk-fieldset__heading">
-                Backdate
+              <h2 class="govuk-label govuk-!-font-weight-bold">
+                Original publication date
               </h2>
+              <span id="time-hint" class="govuk-hint govuk-!-margin-bottom-0">
+              Use 24-hour time. For example, 14:30
+            </span>
             </legend>
+           
             <div class="govuk-date-input" id="date">
-
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="date-day">
@@ -50,8 +68,8 @@
                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-year" name="date-year" type="number" pattern="[0-9]*">
                 </div>
               </div>
-              <span class="govuk-body-l govuk-!-margin-right-2">–</span>
-              <div class="govuk-date-input__item govuk-!-margin-right-2">
+              <span class="govuk-body-l govuk-!-margin-right-3">–</span>
+              <div class="govuk-date-input__item govuk-!-margin-right-1">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="schedule-date">
                     Hour
@@ -59,7 +77,7 @@
                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="schedule-date" name="schedule-date" type="number">
                 </div>
               </div>
-              <span class="govuk-body-l govuk-!-margin-right-2">:</span>
+              <span class="govuk-body-l govuk-!-margin-right-1">:</span>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="schedule-time">
@@ -69,14 +87,11 @@
                 </div>
               </div>
             </div>
-
           </fieldset>    
         </div>  
 
         <button class="govuk-button">Save</button>
-        <p>
-          <a href="content-summary-draft" role="button" class="govuk-link govuk-link--no-visited-state">Clear date</a>
-        </p>
+        
         
       </form>
 
