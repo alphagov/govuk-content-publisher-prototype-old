@@ -5,7 +5,7 @@
        Preview
       </a>
     <p class="govuk-!-margin-bottom-0">
-      <a href="publish" role="button" class="govuk-link govuk-link--no-visited-state">
+      <a href="schedule" role="button" class="govuk-link govuk-link--no-visited-state">
        Schedule
       </a>
       <a href="#" role="button" class="destructive-link destructive-link--right">
@@ -18,55 +18,61 @@
     <details class="govuk-details govuk-!-margin-bottom-0">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          Publish date:<br/>28 March 2019 – 11:30
+          Publish date:<br/>13 February 2019 – 8am
         </span>
       </summary>
     
       <div class="govuk-details__text">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
-            <div class="govuk-date-input" id="dob">
-              <div class="govuk-date-input__item govuk-!-margin-right-2">
+            <div class="govuk-date-input" id="date">
+              <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-label--s" for="schedule-date">
-                    Date
+                  <label class="govuk-label govuk-date-input__label" for="date-day">
+                    Day
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-8" id="schedule-date" name="schedule-date" value="28 March 2019">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-day" name="date-day" type="number" pattern="[0-9]*" value="13">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="date-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-month" name="date-month" type="number" pattern="[0-9]*" value="2">
+                </div>
+              </div>
+              <div class="govuk-date-input__item govuk-!-margin-right-0">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="date-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-3" id="date-year" name="date-year" type="number" pattern="[0-9]*" value="2019">
                 </div>
               </div>
             </div>
           </fieldset>
         </div>
+
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-!-margin-bottom-0">                
-                    Time
-                </legend>
             <div class="govuk-date-input" id="dob">
               <div class="govuk-date-input__item govuk-!-margin-right-2">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="schedule-date">
-                    Hour
+                    Time
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="schedule-date" name="schedule-date" type="number" value="11">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-1" id="schedule-time" name="schedule-time" type="number" value="08:00">
                 </div>
               </div>
-              <span class="govuk-body-l govuk-!-margin-right-2">:</span>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="schedule-time">
-                    Minute
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="schedule-time" name="schedule-time" type="number" value="30">
-                </div>
-              </div>
+             
             </div>
           </fieldset>
 
         </div>
-          <button type="submit" class="govuk-button">
-            Save
-          </button>
+         <a href="content-summary-schedule" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2">
+          Update
+        </a>
            <p class="govuk-!-margin-bottom-0">
             <a href="content-summary-draft" role="button" class="govuk-link govuk-link--no-visited-state">
              Clear date
@@ -78,7 +84,7 @@
 
 <div class="action-block govuk-!-margin-top-4">
   <p><span class="govuk-!-font-weight-bold">Status:</span> Draft</p>
-  <p><span class="govuk-!-font-weight-bold">Last edited:</span><br/>9.14am on 22 August 2018 by Kamala Khan</p>
-  <p><span class="govuk-!-font-weight-bold">Last public update:</span><br/>5.09pm on 21 August 2018</p>
+  <p><span class="govuk-!-font-weight-bold">Last edited:</span><br/>9.14am on 12 February 2019 by Kamala Khan</p>
+  <p><span class="govuk-!-font-weight-bold">Last public update:</span><br/>5.09pm on 21 February 2019</p>
   <p><span class="govuk-!-font-weight-bold">Created by:</span> Kamala Khan</p>
 </div>
