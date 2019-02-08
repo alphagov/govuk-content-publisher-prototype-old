@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="content-summary-schedule">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+     
+      <form class="form" action="confirm-schedule" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Schedule to publish
+              </h1>
+              <p class="govuk-!-margin-top-4">This content will be automatically published at 8am on 13 February 2019.</p>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="publish-1" name="publish" type="radio" value="Publish" aria-describedby="publish-1-item-hint">
+                <label class="govuk-label govuk-radios__label" for="publish-1">
+                  This content has been reviewed and approved for publication.
+                </label>
+
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="publish-2" name="publish" type="radio" value="Force publish" aria-describedby="publish-2-item-hint">
+                <label class="govuk-label govuk-radios__label" for="publish-2">
+                  This content needs to be published urgently but should be reviewed as soon as possible.
+                </label>
+
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Publish</button>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
