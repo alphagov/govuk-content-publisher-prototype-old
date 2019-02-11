@@ -13,16 +13,16 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">Content settings</h1>
-        
+
       <form class="form" action="content-summary-draft-topic" method="post">
-        
+
        <!-- Access limiting -->
-       
+
       <h2 class="govuk-heading-m">
         Access limiting
       </h2>
       <p>Limit access to to view document before publishing. Managing editors in your organisation will always have access.</p>
-        
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -37,7 +37,7 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="org" data-aria-controls="conditional-how-contacted-conditional-1">
               <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-                Your organisation 
+                Your organisation
               </label>
             </div>
             <div class="govuk-radios__item">
@@ -55,7 +55,7 @@
                 <p class="govuk-!-margin-top-3 govuk-!-margin-bottom-9"><a href="">+ Add another email</a></p>
               </div>
             </div>
-    
+
           </div>
         </fieldset>
       </div>
@@ -75,7 +75,7 @@
                 Original publication date
               </h2>
             </legend>
-           
+
             <div class="govuk-date-input" id="date">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
@@ -103,20 +103,15 @@
               </div>
               <span class="govuk-body-l govuk-!-margin-right-3">–</span>
               <div class="govuk-date-input__item govuk-!-margin-right-2">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="schedule-date">
-                    Time
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-5" id="schedule-time" name="schedule-time" type="number" value="08:00">
-                </div>
+                {{ appTimeInput() }}
               </div>
-          </fieldset>    
-        </div> 
+          </fieldset>
+        </div>
 
 
         <button class="govuk-button">Save</button>
-        
-        
+
+
       </form>
 
     </div>
