@@ -245,14 +245,21 @@ td {
   color: #000;
 }
 
-.insert-dropdown img{
-  height: 125px;
+.insert-dropdown {
   position: absolute;
-  left: 676px;
-  top: 690px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid    #bfc1c3;
-  display: none;
+  left: 775px;
+  top: 648px;
+  border-left: 2px solid #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2.5;
+  padding-left: 10px;
+  color: 000;
+}
+
+.insert-dropdown a{
+  text-decoration: none;
+  color: #000;
 }
 
 .markdown-example {
