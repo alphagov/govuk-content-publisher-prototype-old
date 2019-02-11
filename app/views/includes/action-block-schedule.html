@@ -12,7 +12,7 @@
        Delete draft
       </a>
     </p>
-  </form> 
+  </form>
 
   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <details class="govuk-details govuk-!-margin-bottom-0">
@@ -21,11 +21,11 @@
           Publish date:<br/>13 February 2019 – 8am
         </span>
       </summary>
-    
+
       <div class="govuk-details__text">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
-            <div class="govuk-date-input" id="date">
+            <div class="govuk-date-input app-date-input" id="date">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
                   <label class="govuk-label govuk-date-input__label" for="date-day">
@@ -56,19 +56,14 @@
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
-            <div class="govuk-date-input" id="dob">
+            <div class="govuk-date-input app-date-input" id="dob">
               <div class="govuk-date-input__item govuk-!-margin-right-2">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="schedule-date">
-                    Time
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-1" id="schedule-time" name="schedule-time" type="number" value="08:00">
-                </div>
-              </div>             
+                {{ appTimeInput(8) }}
+              </div>
             </div>
           </fieldset>
-
         </div>
+
          <a href="content-summary-schedule" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2">
           Update
         </a>
