@@ -1,0 +1,24 @@
+{% macro appTimeInput(default) %}
+  {% if default %}
+    {% set default = default - 0.5 %}
+  {% endif %}
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-date-input__label" for="schedule-time">
+      Time
+    </label>
+    <select class="govuk-select app-select--time" id="schedule-time" name="schedule-time">
+      <option></option>
+      <option value="00:01am">0:01am</option>
+      {% set minutes = cycler("30", "00") %}
+      {% for i in range(0, 11.5, 0.5) -%}
+        <option {{ 'selected' if i == default }}>{{ i | round }}:{{ minutes.next() }}am</option>
+      {%- endfor %}
+      <option value="12:00pm">12:00pm</option>
+      <option value="12:30pm">12:30pm</option>
+      {% set minutes = cycler("00", "30") %}
+      {% for i in range(0.5, 11.5, 0.5) -%}
+      <option>{{ i | round }}:{{ minutes.next() }}pm</option>
+      {%- endfor %}
+    </select>
+  </div>
+{% endmacro %}

@@ -326,3 +326,13 @@ td {
   color: $govuk-text-colour !important;
   font-weight: bold;
 }
+
+.app-date-input {
+  width: 214px;
+}
+
+.app-select--time {
+  @include govuk-font($size: 19, $tabular: true);
+  width: 214px;
+  border-radius: 0;
+}
