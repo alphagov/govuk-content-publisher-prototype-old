@@ -5,11 +5,33 @@
        Preview
       </a>
     <p class="govuk-!-margin-bottom-0">
-      <a href="#" role="button" class="govuk-link govuk-link--no-visited-state destructive-link destructive-link--right">
+      <a href="#" role="button" class="govuk-link govuk-link--no-visited-state destructive-link">
        Delete draft
       </a>
     </p>
-  </form> 
+  </form>
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <details class="govuk-details govuk-!-margin-bottom-0">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Schedule publishing
+        </span>
+      </summary>
+
+       <div class="govuk-details__text">
+        
+        {% include "includes/time-date-component.html" %}
+        
+          <a href="schedule" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2">
+            Schedule to publish
+          </a>
+          <p class="govuk-!-margin-bottom-0">
+            <a href="content-summary-draft" role="button" class="govuk-link govuk-link--no-visited-state">
+             Clear date
+            </a>
+          </p>
+      </div>
+    </details> 
 </div>
 <div class="action-block govuk-!-margin-top-4">
   <p><span class="govuk-!-font-weight-bold">Status:</span> Submitted for 2i review</p>

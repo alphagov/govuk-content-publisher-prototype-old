@@ -16,60 +16,16 @@
     <details class="govuk-details govuk-!-margin-bottom-0">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          Publish date:<br/>4 March 2019 – 8am
+          Scheduled:<br/>4 March 2019 – 8am
         </span>
       </summary>
 
       <div class="govuk-details__text">
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
-            <div class="govuk-date-input" id="date">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="date-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-day" name="date-day" type="number" pattern="[0-9]*" value="13">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="date-month">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-month" name="date-month" type="number" pattern="[0-9]*" value="2">
-                </div>
-              </div>
-              <div class="govuk-date-input__item govuk-!-margin-right-0">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="date-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-3" id="date-year" name="date-year" type="number" pattern="[0-9]*" value="2019">
-                </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
+        {% include "includes/time-date-component.html" %}
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
-            <div class="govuk-date-input" id="dob">
-              <div class="govuk-date-input__item govuk-!-margin-right-2">
-                {{ appTimeInput(8) }}
-              </div>
-            </div>
-          </fieldset>
-
-        </div>
-         <a href="content-summary-schedule" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2">
+         <a href="content-summary-scheduled" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2">
           Update
         </a>
-           <p class="govuk-!-margin-bottom-0">
-            <a href="content-summary-submitted" role="button" class="govuk-link govuk-link--no-visited-state">
-             Clear date
-            </a>
-          </p>
       </div>
     </details>
 </div>
