@@ -21,7 +21,7 @@
             </label>
             <textarea class="govuk-textarea" id="title" name="title" rows="2" aria-describedby="more-detail-hint">Ofsted launches point-in-time surveys</textarea>
           </div>
-    
+
           <div class="govuk-form-group govuk-!-margin-bottom-0">
             <label class="govuk-label govuk-!-font-weight-bold" for="summary">
               Summary
@@ -40,14 +40,14 @@
             <a href=""><img src="/public/images/blockquote.svg" alt=""></a>
             <a href=""><img src="/public/images/number-list.svg" alt=""></a>
             <a href=""><img src="/public/images/bullet-point.svg" alt=""></a>
+            <div class="insert-dropdown">
+              <a href="video-modal" data-toggle="modal" data-target="modal-dialogue-video">Add video</a>
+            </div>
           </div>
-          <div class="insert-dropdown">
-            <a href="video-modal">Add video</a>
-          </div>
-            <label class="govuk-label govuk-!-font-weight-bold" for="body">
-              Body
-            </label>
-            <textarea class="govuk-textarea" id="body" name="body" rows="20" aria-describedby="body">
+          <label class="govuk-label govuk-!-font-weight-bold" for="body">
+            Body
+          </label>
+          <textarea class="govuk-textarea" id="body" name="body" rows="20" aria-describedby="body">
 
 
 
@@ -69,4 +69,34 @@ Ofsted is asking for responses by 9 November 2018.
 
   </div>
 
+{% endblock %}
+
+{% block beforeBodyEnd %}
+  {% call appModalDialogue({ id: "modal-dialogue-video"}) %}
+  <h1 class="govuk-heading-l govuk-!-margin-top-4" for="video-web-address">Embed YouTube video</h1>
+  <p>
+    Only YouTube videos can be embedded on GOV.UK. <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown#video">Full guidance on videos on GOV.UK.</a>
+  </p>
+  <form action="create-document">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-weight-bold" for="summary">
+        Video title
+      </label>
+      <input class="govuk-input govuk-input--width-12" id="video-title" name="video-title" type="text" aria-describedby="video-title-hint">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-!-font-weight-bold" for="video-web-address">
+        YouTube video web address
+      </label>
+      <span id="video-web-address-hint" class="govuk-hint">
+        Links should start: https://www.youtube.com/watch
+      </span>
+      <input class="govuk-input govuk-input--width-12" id="video-web-address" name="video-web-address" type="text" aria-describedby="video-web-address-hint">
+    </div>
+    <div class="actions">
+      <button class="govuk-button">Embed video</button>
+    </div>
+  </form>
+
+  {% endcall %}
 {% endblock %}
