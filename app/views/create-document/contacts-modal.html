@@ -5,13 +5,13 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link blur" href="content-summary-draft">Back</a>
+  <a class="govuk-back-link" href="content-summary-draft">Back</a>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds blur">
+    <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">New news story</h1>
       <form>
@@ -38,47 +38,43 @@
           <button class="govuk-button">Save</button>
       </form>
     </div>
-      <div id="modal-dialogue-contacts" class="example">
-        <div id="modal">
-
-          <div id="modal-content" tabindex="1">
-            <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--l govuk-!-margin-top-4" for="primary-organisation">
-              Search contacts
-            </label>
-            <select class="govuk-select" id="primary-organisation" name="primary-organisation">
-              <option value="dwp">Department for Work and Pension</option>
-              <option value="hmlr" selected>Department for Transport</option>
-              <option value="dhsc">Department for Health and Social Care</option>
-              <option value="nda">Nuclear Decommissioning Authority</option>
-              <option value="ajc">Academy for Justice Commissioning</option>
-              <option value="dsc">Department for Health and Social Care</option>
-              <option value="na">Nuclear Decommissioning Authority</option>
-              <option value="ac">Academy for Justice Commissioning</option>
-              <option value="hsc">Department for Health and Social Care</option>
-              <option value="da">Nuclear Decommissioning Authority</option>
-              <option value="jc">Academy for Justice Commissioning</option>
-              <option value="dhs">Department for Health and Social Care</option>
-              <option value="nd">Nuclear Decommissioning Authority</option>
-              <option value="aj">Academy for Justice Commissioning</option>
-            </select>
-          </div>
-
-          <div class="govuk-inset-text">
-            <p>Department for Transport <br/>
-               Victoria Street <br/>
-               London</p>
-          </div>
-
-          <div class="actions">
-            <button class="govuk-button">Add contact</button>
-            <p><a href="">Edit or add new contact</a></p>
-            <a class="close-modal" href="#modal-tooltip-example">&times;<span>Close<span></a>
-          </div>
-
-        </div>
-      </div>
-
   </div>
 
+{% endblock %}
+
+{% block beforeBodyEnd %}
+  {% call appModalDialogue({ id: "modal-dialogue-contacts"}) %}
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--l" for="primary-organisation">
+        Search contacts
+      </label>
+      <select class="govuk-select" id="primary-organisation" name="primary-organisation">
+        <option value="dwp">Department for Work and Pension</option>
+        <option value="hmlr" selected>Department for Transport</option>
+        <option value="dhsc">Department for Health and Social Care</option>
+        <option value="nda">Nuclear Decommissioning Authority</option>
+        <option value="ajc">Academy for Justice Commissioning</option>
+        <option value="dsc">Department for Health and Social Care</option>
+        <option value="na">Nuclear Decommissioning Authority</option>
+        <option value="ac">Academy for Justice Commissioning</option>
+        <option value="hsc">Department for Health and Social Care</option>
+        <option value="da">Nuclear Decommissioning Authority</option>
+        <option value="jc">Academy for Justice Commissioning</option>
+        <option value="dhs">Department for Health and Social Care</option>
+        <option value="nd">Nuclear Decommissioning Authority</option>
+        <option value="aj">Academy for Justice Commissioning</option>
+      </select>
+    </div>
+
+    <div class="govuk-inset-text">
+      <p>Department for Transport <br/>
+         Victoria Street <br/>
+         London</p>
+    </div>
+
+    <div class="actions">
+      <button class="govuk-button">Add contact</button>
+      <p><a href="">Edit or add new contact</a></p>
+    </div>
+  {% endcall %}
 {% endblock %}
