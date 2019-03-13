@@ -24,6 +24,7 @@
 {% from "warning-text/macro.njk"  import govukWarningText %}
 
 {% from "components/time-input.njk" import appTimeInput %}
+{% from "components/modal-dialogue.njk" import appModalDialogue %}
 
 {% block head %}
   {% include "includes/head.html" %}
@@ -119,7 +120,9 @@
   {% endblock %}
 {% endif %}
 
+
 {% block bodyEnd %}
+  {% block beforeBodyEnd %}{% endblock %}
   {% block scripts %}
     {% include "includes/scripts.html" %}
     {% block pageScripts %}{% endblock %}
