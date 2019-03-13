@@ -10,62 +10,19 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">New news story</h1>
-      <form>
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-!-font-weight-bold" for="title">
-              Title
-            </label>
-            <textarea class="govuk-textarea" id="title" name="title" rows="2" aria-describedby="more-detail-hint"></textarea>
-          </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-!-font-weight-bold" for="summary">
-              Summary
-            </label>
-            <textarea class="govuk-textarea" id="summary" name="summary" rows="4" aria-describedby="more-detail-hint"></textarea>
-          </div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-!-font-weight-bold" for="body">
-              Body
-            </label>
-            <textarea class="govuk-textarea" id="body" name="body" rows="30" aria-describedby="more-detail-hint"></textarea>
-          </div>
-          <button class="govuk-button">Save</button>
-      </form>
-    </div>
-  </div>
+  {% include "includes/create-document.html" %}
 
 {% endblock %}
 
 {% block beforeBodyEnd %}
   {% call appModalDialogue({ id: "modal-dialogue-attachments"}) %}
   <h1 class="govuk-heading-l govuk-!-margin-top-4" for="video-web-address">Insert attachment</h1>
-  <div class="action-block">
-    <h2 class="govuk-heading-m">Upload a file attachment</h2>
-    <p>
-      All files must be accessible. <a href="">Full guidance on accessible attachments.</a> Files must be uploaded in an open standards file format. For example, .odt not .docx.
-    </p>
-
-    <div class="govuk-form-group">
-      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+  
+  <img src="/public/images/file-attachment-icon.svg" alt="" class="attachment-icon">    
+    <div class="attachment-metadata">
+      <p><span class="govuk-!-font-weight-bold">Title:</span> Report on the profile statistics consultation case study minutes (PDF, 9.87MB) <br /><span class="govuk-!-font-weight-bold">Markdown code:</span> [Attachment:file-name.odt]</p>
     </div>
 
-    <div class="govuk-form-group">
-      <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
-        Attachment title
-      </label>
-      <span id="event-name-hint" class="govuk-hint">
-        Use the official title of the document
-      </span>
-      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
-    </div>
-
-    <button class="govuk-button">Embed video</button>
-  </div>
+     <a href="attachments-modal" role="button" class="govuk-button govuk-!-margin-bottom-9">Insert attachment</a>
   {% endcall %}
 {% endblock %}

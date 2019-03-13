@@ -95,4 +95,5 @@ var $modals = document.querySelectorAll('[data-module="modal-dialogue"]')
 $modals.forEach(function ($modal) {
   var $m = new window.GOVUK.Modules.ModalDialogue()
   $m.start($modal)
+  $modal.open()
 })

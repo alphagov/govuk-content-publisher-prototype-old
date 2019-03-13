@@ -10,93 +10,43 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">New news story</h1>
-      <form>
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-!-font-weight-bold" for="title">
-              Title
-            </label>
-            <textarea class="govuk-textarea" id="title" name="title" rows="2" aria-describedby="more-detail-hint">Ofsted launches point-in-time surveys</textarea>
-          </div>
-
-          <div class="govuk-form-group govuk-!-margin-bottom-0">
-            <label class="govuk-label govuk-!-font-weight-bold" for="summary">
-              Summary
-            </label>
-            <textarea class="govuk-textarea govuk-!-margin-bottom-0" id="summary" name="summary" rows="4" aria-describedby="more-detail-hint">Surveys for boarding schools are now open for children who board at the school, their parents and residential staff. </textarea>
-          </div>
-
-          <div class="govuk-form-group">
-            <div class="preview-toggle">
-            <a href="" class="active">Edit markdown</a><a href="">Preview markdown</a>
-          </div>
-          <div class="markdown-editor">
-            <a href="#"><img src="/public/images/heading-two.svg" alt=""></a>
-            <a href=""><img src="/public/images/heading-three.svg" alt=""></a>
-            <a href=""><img src="/public/images/link.svg" alt=""></a>
-            <a href=""><img src="/public/images/blockquote.svg" alt=""></a>
-            <a href=""><img src="/public/images/number-list.svg" alt=""></a>
-            <a href=""><img src="/public/images/bullet-point.svg" alt=""></a>
-            <div class="insert-dropdown">
-              <a href="video-modal" data-toggle="modal" data-target="modal-dialogue-video">Add video</a>
-            </div>
-          </div>
-          <label class="govuk-label govuk-!-font-weight-bold" for="body">
-            Body
-          </label>
-          <textarea class="govuk-textarea" id="body" name="body" rows="20" aria-describedby="body">
-
-
-
-
-Ofsted has today (Monday 1 October) issued its annual point-in-time online surveys for boarding schools.
-
-The surveys are for children who board at the school, their parents and residential staff.
-
-Ofsted inspectors want to hear what they have to say about the school. Their responses will help inform future inspections.
-
-Ofsted is asking for responses by 9 November 2018.
-
-
-            </textarea>
-          </div>
-          <button class="govuk-button">Save</button>
-      </form>
-    </div>
-
-  </div>
+  {% include "includes/create-document.html" %}
 
 {% endblock %}
 
 {% block beforeBodyEnd %}
-  {% call appModalDialogue({ id: "modal-dialogue-video"}) %}
-  <h1 class="govuk-heading-l govuk-!-margin-top-4" for="video-web-address">Embed YouTube video</h1>
-  <p>
-    Only YouTube videos can be embedded on GOV.UK. <a href="https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown#video">Full guidance on videos on GOV.UK.</a>
-  </p>
-  <form action="create-document">
+  {% call appModalDialogue({ id: "modal-dialogue-attachments"}) %}
+  <h1 class="govuk-heading-l govuk-!-margin-top-4">Insert attachment</h1>
+  <div class="action-block">
+    <h2 class="govuk-heading-m">Upload a file attachment</h2>
+    <p>
+      All files must be accessible. <a href="">Full guidance on accessible attachments.</a> Files must be uploaded in an open standards file format. For example, .odt not .docx.
+    </p>
+
     <div class="govuk-form-group">
-      <label class="govuk-label govuk-!-font-weight-bold" for="summary">
-        Video title
-      </label>
-      <input class="govuk-input govuk-input--width-12" id="video-title" name="video-title" type="text" aria-describedby="video-title-hint">
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
     </div>
+
     <div class="govuk-form-group">
-      <label class="govuk-label govuk-!-font-weight-bold" for="video-web-address">
-        YouTube video web address
+      <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+        Attachment title
       </label>
-      <span id="video-web-address-hint" class="govuk-hint">
-        Links should start: https://www.youtube.com/watch
+      <span id="event-name-hint" class="govuk-hint">
+        Use the official title of the document
       </span>
-      <input class="govuk-input govuk-input--width-12" id="video-web-address" name="video-web-address" type="text" aria-describedby="video-web-address-hint">
+      <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
     </div>
-    <div class="actions">
-      <button class="govuk-button">Embed video</button>
-    </div>
-  </form>
+
+    <a href="attachments-modal" role="button" class="govuk-button govuk-!-margin-bottom-2">Upload</a>
+  </div>
+
+  <div class="govuk-grid-row govuk-!-margin-left-1 govuk-!-margin-top-4">
+    <h2 class="govuk-heading-m">Other attachments</h2>
+     <img src="/public/images/file-attachment-icon.svg" alt="" class="attachment-icon">    
+      <div class="attachment-metadata">
+        <p><span class="govuk-!-font-weight-bold">Title:</span> Report on the profile statistics consultation case study minutes (PDF, 9.87MB) <br /><span class="govuk-!-font-weight-bold">Markdown code:</span> [Attachment:file-name.odt]</p>
+      </div>
+  </div>
 
   {% endcall %}
 {% endblock %}
