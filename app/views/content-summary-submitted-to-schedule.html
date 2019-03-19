@@ -1,13 +1,12 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  New news story
+  Question page
 {% endblock %}
-
 
 {% block content %}
 
-  
+ 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
   {% include "includes/content-summary-title.html" %}
@@ -35,11 +34,11 @@
     <div class="govuk-grid-row">
 
       <div class="govuk-grid-column-two-thirds">
-        {% include "includes/content-summary-body-topic.html" %}
+        {% include "includes/content-summary-body.html" %}
       </div>
        
      <div class="govuk-grid-column-one-third">
-       {% include "includes/action-block-draft.html" %}
+       {% include "includes/action-block-to-schedule.html" %}
      </div>
 
     </div>
@@ -51,7 +50,5 @@
   </section> 
 
 </div>
-
-
 
 {% endblock %}

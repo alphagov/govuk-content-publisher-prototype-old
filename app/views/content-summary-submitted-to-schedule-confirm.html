@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  New news story
+  Question page
 {% endblock %}
 
 
 {% block content %}
 
-  
+ 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
   {% include "includes/content-summary-title.html" %}
@@ -35,11 +35,22 @@
     <div class="govuk-grid-row">
 
       <div class="govuk-grid-column-two-thirds">
-        {% include "includes/content-summary-body-topic.html" %}
+        <div class="success-summary">
+
+            <h2 class="govuk-heading-m">Content has been submitted for 2i review</h2>
+            <p>Send this document to another publisher for them to review. When content is ready you or they can publish it.
+            </p>
+            <p>
+              <a href="">https://content-publisher.integration.publishing.service.gov.uk/documents/giant-crane-to-bring-the-windscale-pile-one-chimney-down</a>
+            </p>
+            <button class="govuk-button secondary-button-quiet govuk-!-margin-bottom-2">Copy link</button>
+
+          </div>
+        {% include "includes/content-summary-body.html" %}
       </div>
        
      <div class="govuk-grid-column-one-third">
-       {% include "includes/action-block-draft.html" %}
+       {% include "includes/action-block-to-schedule.html" %}
      </div>
 
     </div>
@@ -51,7 +62,5 @@
   </section> 
 
 </div>
-
-
 
 {% endblock %}

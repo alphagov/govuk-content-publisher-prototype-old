@@ -1,6 +1,6 @@
 <div class="action-block ">
-  <form class="form" action="publish" method="post">
-    <button class="govuk-button action-button govuk-!-margin-bottom-4">Publish</button>
+  <form class="form" action="schedule" method="post">
+    <button class="govuk-button action-button govuk-!-margin-bottom-4">Schedule to publish</button>
     <a href="preview" role="button" class="govuk-button secondary-button action-button">
        Preview
       </a>
@@ -14,17 +14,22 @@
     <details class="govuk-details govuk-!-margin-bottom-0">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          Schedule publishing
+          Proposed to publish at 8am on 21 March 2019
         </span>
       </summary>
 
        <div class="govuk-details__text">
         
-        {% include "includes/time-date-component.html" %}
+        {% include "includes/time-date-component-filled.html" %}
         
           <a href="schedule" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2">
             Schedule to publish
           </a>
+          <p class="govuk-!-margin-bottom-0">
+            <a href="content-summary-submitted" role="button" class="govuk-link govuk-link--no-visited-state">
+             Clear date
+            </a>
+          </p>
       </div>
     </details> 
 </div>
