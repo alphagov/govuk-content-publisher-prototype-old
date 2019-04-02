@@ -1,39 +1,25 @@
 <div class="action-block">
   <form class="form" action="content-summary-submitted" method="post">
-    <button class="govuk-button action-button govuk-!-margin-bottom-4">Submit for 2i review</button>
-     <a href="preview" role="button" class="govuk-button secondary-button action-button">
+    <button class="govuk-button action-button govuk-!-margin-bottom-3">Submit for 2i review</button>
+     <a href="preview" role="button" class="govuk-button secondary-button action-button govuk-!-margin-bottom-3">
        Preview
       </a>
-    <p class="govuk-!-margin-bottom-0">
+    <p class="govuk-!-margin-bottom-3">
       <a href="publish" role="button" class="govuk-link govuk-link--no-visited-state">
        Publish
-      </a>
-      <a href="#" role="button" class="destructive-link destructive-link--right">
-       Delete draft
+      </a> 
+        
+      <a href="schedule" role="button" class="govuk-link govuk-link--no-visited-state destructive-link--right">
+       Schedule
       </a>
     </p>
+    <p class="govuk-!-margin-bottom-0"> 
+      <a href="#" role="button" class="destructive-link">
+      Delete draft
+      </a> 
+   </p>
   </form>
 
-  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <details class="govuk-details govuk-!-margin-bottom-0">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Schedule publishing
-        </span>
-      </summary>
-
-       <div class="govuk-details__text">
-        
-        {% include "includes/time-date-component.html" %}
-        
-          <a href="schedule" role="button" draggable="false" class="govuk-button action-button govuk-!-margin-top-2 govuk-!-margin-bottom-4">
-            Schedule to publish
-          </a>
-         <a href="content-summary-submitted-to-schedule-confirm" role="button" class="govuk-button secondary-button action-button">
-         Save date and submit for 2i review
-        </a>
-      </div>
-    </details>
 </div>
 
 <div class="action-block govuk-!-margin-top-4">

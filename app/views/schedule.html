@@ -4,46 +4,45 @@
   Question page
 {% endblock %}
 
-{% block beforeContent %}
-  <a class="govuk-back-link" href="content-summary-draft">Back</a>
-{% endblock %}
-
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
      
-      <form class="form" action="confirm-schedule" method="post">
+      <form class="form" action="/schedule" method="post">
+        
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <h1 class="govuk-fieldset__heading">
-                Schedule to publish
+              <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-4">
+                Set a date and time to publish
               </h1>
-              <p class="govuk-!-margin-top-4">This content will be automatically published at 8am on 19 March 2019.</p>
-            </legend>
-            <div class="govuk-radios">
+            </legend>            
+            {% include "includes/time-date-component.html" %}
+            
+            <div class="govuk-radios govuk-!-margin-top-8">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="publish-1" name="publish" type="radio" value="Publish" aria-describedby="publish-1-item-hint">
-                <label class="govuk-label govuk-radios__label" for="publish-1">
-                 This content has been reviewed and approved for publication
+                <input class="govuk-radios__input" id="set-date-to-publish" name="save" type="radio" value="save">
+                <label class="govuk-label govuk-radios__label" for="set-date-to-publish-1">
+                  Save date and submit for 2i review
                 </label>
-
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="publish-2" name="publish" type="radio" value="Force publish" aria-describedby="publish-2-item-hint">
-                <label class="govuk-label govuk-radios__label" for="publish-2">
-                  This content needs to be reviewed after it has been published
+                <input class="govuk-radios__input" id="set-date-to-publish-2" name="save" type="radio" value="schedule">
+                <label class="govuk-label govuk-radios__label" for="set-date-to-publish-2">
+                  Schedule to publish
                 </label>
-
-              </div>
-
+              </div>             
             </div>
           </fieldset>
         </div>
 
-        <button class="govuk-button">Schedule</button>
-
+        <button class="govuk-button">Continue</button>
+        <p>
+          <a href="content-summary-draft" role="button">
+           Cancel
+          </a>
+        </p>
 
       </form>
 

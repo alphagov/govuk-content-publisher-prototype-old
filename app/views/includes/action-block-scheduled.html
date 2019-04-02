@@ -1,26 +1,17 @@
+<div class="withdrawn-summary govuk-!-margin-top-4"> 
+  <p class="govuk-!-margin-bottom-1">Scheduled to publish at {% include "includes/time-and-date.html" %}</p>
+  <p class="govuk-!-margin-bottom-0">
+    <a href="schedule-change-date" role="button" class="govuk-link govuk-link--no-visited-state">Change date</a>   
+  </p>
+ </div>
+
 <div class="action-block">
   <form class="form" action="preview" method="post">
-    <button class="govuk-button action-button govuk-!-margin-bottom-4">Preview</button>
-     <a href="content-summary-draft" role="button" class="govuk-button secondary-button action-button">
+    <button class="govuk-button action-button govuk-!-margin-bottom-3">Preview</button>
+     <a href="content-summary-draft" role="button" class="govuk-button secondary-button action-button govuk-!-margin-bottom-3">
        Stop scheduled publishing
       </a>
   </form>
-
-    <details class="govuk-details govuk-!-margin-bottom-0">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Scheduled to publish:<br/>21 March 2019 – 8am
-        </span>
-      </summary>
-
-      <div class="govuk-details__text">
-        {% include "includes/time-date-component.html" %}
-
-         <a href="content-summary-scheduled" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2">
-          Update
-        </a>
-      </div>
-    </details>
 </div>
 
 <div class="action-block govuk-!-margin-top-4">
