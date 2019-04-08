@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content settings
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="content-summary-draft">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Access limiting</h1>
+      <p class="govuk-body">
+        Limit access to edit and preview document before publishing. Managing editors in your organisation will always have access.
+      </p>
+
+      <form class="form" action="content-summary-draft-topic" method="post">
+
+       <!-- Access limiting -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+
+          <div class="govuk-checkboxes govuk-!-margin-top-4" data-module="checkboxes">
+            
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" name="primary-org" type="checkbox">
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                Limit access to primary organisation
+              </label>
+              <span class="govuk-checkboxes__hint govuk-hint">[Public Health England]
+              </span>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+
+
+      <button class="govuk-button">Save</button>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

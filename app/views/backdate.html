@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content settings
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="content-summary-draft">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Backdate old content</h1>
+
+       <p class="govuk-body">
+        If content has previously been published you must set the original publication date back to when it was first published online.
+      </p>
+
+      <form class="form" action="content-summary-draft-topic" method="post">
+
+        {% include "includes/time-date-component.html" %}
+
+        <button class="govuk-button">Save</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
