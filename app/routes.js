@@ -33,7 +33,7 @@ router.post('/schedule', function (req, res) {
   let schedule = req.session.data['save']
 
   if (schedule === 'save') {
-    res.redirect('/content-summary-submitted-to-schedule-confirm')
+    res.redirect('/content-summary-draft-date')
   } else {
     res.redirect('/schedule-2')
   }
