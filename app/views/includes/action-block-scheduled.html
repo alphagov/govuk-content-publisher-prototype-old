@@ -1,16 +1,16 @@
-<div class="withdrawn-summary govuk-!-margin-top-4"> 
+<div class="withdrawn-summary govuk-!-margin-bottom-0"> 
   <p class="govuk-!-margin-bottom-1">Scheduled to publish at {% include "includes/time-and-date.html" %}</p>
-  <p class="govuk-!-margin-bottom-0">
+  <p class="govuk-!-margin-bottom-1">
     <a href="schedule-change-date" role="button" class="govuk-link govuk-link--no-visited-state">Change date</a>   
+  </p>
+  <p class="govuk-!-margin-bottom-0">
+    <a href="schedule-change-date" role="button" class="govuk-link govuk-link--no-visited-state">Stop scheduled publishing</a>   
   </p>
  </div>
 
-<div class="action-block">
+<div class="action-block govuk-!-margin-top-4">
   <form class="form" action="preview" method="post">
     <button class="govuk-button action-button govuk-!-margin-bottom-3">Preview</button>
-     <a href="content-summary-draft" role="button" class="govuk-button secondary-button action-button govuk-!-margin-bottom-3">
-       Stop scheduled publishing
-      </a>
   </form>
 </div>
 
