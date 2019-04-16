@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Edit ‘Untitled document’
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/content-summary-draft">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  {% include "includes/create-document.html" %}
+
+{% endblock %}
+
+{% block beforeBodyEnd %}
+  {% call appModalDialogue({ id: "modal-dialogue-attachments"}) %}
+  <h1 class="govuk-heading-l govuk-!-margin-top-4">Edit attachment</h1>
+
+  <div class="govuk-form-group govuk-!-margin-bottom-7">
+    <label class="govuk-label govuk-!-font-weight-bold" for="attachment-title">Edit title
+    </label>
+    <span id="event-name-hint" class="govuk-hint">
+      Use the official title of the document
+    </span>
+    <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint" value="Previous attachment title here">
+
+    <!-- <p>
+      Current file: <a href="">Current attachment title (PDF, 238KB, 1 page)</a> 
+    </p> -->
+  </div>
+ 
+  <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Replace file</h2>
+  <p>
+    All files must be accessible. <a href="">Full guidance on accessible attachments.</a> Files must be uploaded in an open standards file format. For example, .odt not .docx.
+  </p>
+  
+  <div class="govuk-form-group govuk-!-margin-bottom-7">
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+  </div>
+
+  <a href="attachments-modal" role="button" class="govuk-button govuk-!-margin-bottom-2">Save</a>
+
+
+
+  {% endcall %}
+{% endblock %}
