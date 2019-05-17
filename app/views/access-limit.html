@@ -12,9 +12,12 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Access limiting</h1>
+      <h1 class="govuk-heading-l">Who can access this document?</h1>
       <p class="govuk-body">
-        Limit access to edit and preview document before publishing. Managing editors in your organisation will always have access.
+        You can restrict who is able to find and edit this document before it is published. 
+      </p>
+      <p class="govuk-body">
+        Managing editors in the primary organisation will always have access. 
       </p>
 
       <form class="form" action="content-summary-draft-topic" method="post">
@@ -27,18 +30,26 @@
           <div class="govuk-checkboxes govuk-!-margin-top-4" data-module="checkboxes">
             
             <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" name="primary-org" type="checkbox" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+                All publishers have access
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" name="primary-org" type="checkbox">
               <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
-                Limit access to primary organisation
+                Only publishers in the primary organisation have access
               </label>
-              <span class="govuk-checkboxes__hint govuk-hint">[Public Health England]
+               <span class="govuk-checkboxes__hint govuk-hint">[Public Health England]
               </span>
             </div>
-             <div class="govuk-checkboxes__item">
+            <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" name="primary-org" type="checkbox">
               <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
-                Limit access to tagged supporting organisations
+                Only publishers in tagged organisation have access
               </label>
+               <span class="govuk-checkboxes__hint govuk-hint">[Dept 1]
+              </span>
             </div>
 
           </div>
