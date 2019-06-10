@@ -14,13 +14,12 @@
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Who can access this document</h1>
       <p class="govuk-body">
-        You can restrict who is able to find and edit this document before it is published. 
-      </p>
-      <p class="govuk-body">
-        Managing editors in the primary organisation will always have access. 
-      </p>
+        You can limit who is able to find and edit this document before it is published. Select an option that includes the organisation associated with your account.
 
-      <form class="form" action="content-summary-draft-topic" method="post">
+      </p>
+      
+
+      <form class="form" action="content-summary-draft" method="post">
 
        <!-- Access limiting -->
 
@@ -40,7 +39,7 @@
               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
                 Only publishers in the primary organisation have access
               </label>
-               <span class="govuk-radios__hint govuk-hint">[Public Health England]
+               <span class="govuk-radios__hint govuk-hint">[tagged primary organisation]
               </span>
             </div>
             <div class="govuk-radios__item">
@@ -48,9 +47,9 @@
               <label class="govuk-label govuk-radios__label" for="citizenship-conditional-1">
                 Only publishers in tagged organisation have access
               </label>
-               <span class="govuk-radios__hint govuk-hint">[Public Health England]
+               <span class="govuk-radios__hint govuk-hint">[tagged primary organisation]
               </span>
-              <span class="govuk-radios__hint govuk-hint">[Department for Work and Pensions]
+              <span class="govuk-radios__hint govuk-hint">[tagged secondary organisations (show all)]
               </span>
             </div>
 
