@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is the content for?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="what-is-content-for">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="choose-document-type-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                News
+              </h1>
+            </legend>    
+
+            <div class="govuk-radios" data-module="radios">
+          
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-document-type-1" name="news-type" type="radio" value="email" data-aria-controls="conditional-choose-document-type-1">
+                  <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-1">
+                    News story
+                  </label> 
+                  <span id="choose-document-type-1-item-hint" class="govuk-hint govuk-radios__hint">
+                    News written for GOV.UK which users need, can act on, and cannot get from other sources.
+                  </span> 
+                </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-2" name="news-type" type="radio" value="govuk-verify" aria-describedby="choose-document-type-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-2">
+                  Press release
+                </label> <span id="choose-document-type-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Unedited press releases as sent to the media, and official statements from the organisation. 
+                </span> </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-3" name="news-type" type="radio" value="govuk-verify" aria-describedby="choose-document-type-3-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-3">
+                  Fatality notice
+                </label> <span id="choose-document-type-3-item-hint" class="govuk-hint govuk-radios__hint">
+                  Initial fatality notices and subsequent obituaries of forces and MOD personnel 
+                </span> </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-4" name="news-type" type="radio" value="govuk-verify" aria-describedby="choose-document-type-4-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-4">
+                  Speech
+                </label> <span id="choose-document-type-4-item-hint" class="govuk-hint govuk-radios__hint">
+                  Public speeches, etc
+                </span> </div>
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-5" name="news-type" type="radio" value="govuk-verify" aria-describedby="choose-document-type-5-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-5">
+                  Statement
+                </label> <span id="choose-document-type-5-item-hint" class="govuk-hint govuk-radios__hint">
+                  Writen and oral statements to parliament, or authored articles
+                </span> </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-6" name="news-type" type="radio" value="govuk-verify" aria-describedby="choose-document-type-6-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-6">
+                  World news story
+                </label> <span id="choose-document-type-6-item-hint" class="govuk-hint govuk-radios__hint">
+                  Announcements specific to one or more world location 
+                </span> </div>
+      
+            </div>
+          </fieldset>
+        </div>
+
+        
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

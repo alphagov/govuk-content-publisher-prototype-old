@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What is the content for?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="choose-news-type" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="choose-supertype-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is the content for
+              </h1>
+            </legend>
+            
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">                
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-supertype-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-choose-supertype-1">
+                  <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-1">
+                    News
+                  </label> 
+                  <span id="choose-supertype-1-item-hint" class="govuk-hint govuk-radios__hint">
+                  To tell users about something government has done or will do 
+                  </span> 
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-choose-supertype-1">
+                  <p class="govuk-body">For example, news stories, press releases, speeches, or statements</p>
+                </div>
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-supertype-2" name="choose-supertype" type="radio" value="govuk-verify" aria-describedby="choose-supertype-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-2">
+                  Guidance 
+                </label> <span id="choose-supertype-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  To help the user do something or understand what they need to do
+                </span> </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-supertype-3" name="choose-supertype" type="radio" value="govuk-verify" aria-describedby="choose-supertype-3-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-3">
+                  Transparency and statistics 
+                </label> <span id="choose-supertype-3-item-hint" class="govuk-hint govuk-radios__hint">
+                  To provide information that helps users hold government to account 
+                </span> </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-supertype-4" name="choose-supertype" type="radio" value="govuk-verify" aria-describedby="choose-supertype-4-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-4">
+                  Policy or consultation 
+                </label> <span id="choose-supertype-4-item-hint" class="govuk-hint govuk-radios__hint">
+                  To explain the government’s position or request views or evidence on an issue
+                </span> </div>
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-supertype-5" name="choose-supertype" type="radio" value="govuk-verify" aria-describedby="choose-supertype-5-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-5">
+                  Document collection 
+                </label> <span id="choose-supertype-5-item-hint" class="govuk-hint govuk-radios__hint">
+                  To create a list of related documents on a single page
+                </span> </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-supertype-6" name="choose-supertype" type="radio" value="govuk-verify" aria-describedby="choose-supertype-6-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-6">
+                  Corporate information
+                </label> <span id="choose-supertype-6-item-hint" class="govuk-hint govuk-radios__hint">
+                  Information about your organisation
+                </span> </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-supertype-7" name="choose-supertype" type="radio" value="govuk-verify" aria-describedby="choose-supertype-7-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-7">
+                  I’m not sure if this should be on GOV.UK 
+                </label> <span id="choose-supertype-7-item-hint" class="govuk-hint govuk-radios__hint">
+                  View this guide to see what should go on GOV.UK and where else you can publish content
+                </span> </div>        
+            </div>
+          </fieldset>
+        </div>
+
+        
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
