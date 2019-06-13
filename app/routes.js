@@ -25,6 +25,8 @@ module.exports = router
 
 
 // Branching
+
+// Scheduling 
 router.post('/schedule', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
@@ -36,5 +38,21 @@ router.post('/schedule', function (req, res) {
     res.redirect('/content-summary-draft-date')
   } else {
     res.redirect('/schedule-2')
+  }
+})
+
+
+// Speech or statement 
+router.post('/speech/choose-news-type', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  let schedule = req.session.data['news-type']
+
+  if (schedule === 'speech') {
+    res.redirect('/speech/choose-speech-type')
+  } else {
+    res.redirect('/speech/speech-steps-1')
   }
 })
