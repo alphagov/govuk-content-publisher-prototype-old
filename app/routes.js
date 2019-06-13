@@ -48,11 +48,15 @@ router.post('/speech/choose-news-type', function (req, res) {
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  let schedule = req.session.data['news-type']
+  let speech = req.session.data['news-type']
 
-  if (schedule === 'speech') {
+  if (speech === 'speech') {
     res.redirect('/speech/choose-speech-type')
-  } else {
-    res.redirect('/speech/speech-steps-1')
+  } 
+  if (speech === 'statement') {
+      res.redirect('/speech/speech-steps-1')
+    }
+  else {
+    res.redirect('/speech/choose-news-type')
   }
 })
