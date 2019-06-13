@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  New Speech
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="">Back</a>
+{% endblock %}
+
+{% block content %}
+<form action="" class="app-c-contextual-guidance__form">
+  <h1 class="govuk-heading-l">Speech details for ‘Title’</h1>
+  
+  <div class="govuk-grid-row">      
+    <div class="govuk-grid-column-two-thirds">
+      
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="speech-type">
+            Speech type
+          </label>
+          <select class="govuk-select" id="sort" name="sort" data-contextual-guidance="speech-type-guidance">
+            <option value="nothing-selected"> </option>
+            <option value="transcript">Transcript</option>
+            <option value="draft-text">Draft text</option>
+            <option value="speaking-notes">Speaking notes</option>
+          </select>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-c-contextual-guidance__wrapper" id="speech-type-guidance" data-module="contextual-guidance">
+        <div class="app-c-contextual-guidance">
+          <h2 class="govuk-heading-s">Speech type</h2>
+          <p class="govuk-body">etc</p>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
+          Speaker
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text" data-contextual-guidance="speaker-guidance">
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-c-contextual-guidance__wrapper" id="speaker-guidance" data-module="contextual-guidance">
+          <div class="app-c-contextual-guidance">
+            <h2 class="govuk-heading-s">contextual guidance</h2>
+            <p class="govuk-body">guidance</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    {% include "includes/time-date-component-filled.html" %}
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
+          Location
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text" data-contextual-guidance="location-guidance">
+      </div>
+      <button class="govuk-button">Save</button>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-c-contextual-guidance__wrapper" id="location-guidance" data-module="contextual-guidance">
+          <div class="app-c-contextual-guidance">
+            <h2 class="govuk-heading-s">location guidance</h2>
+            <p class="govuk-body">guidance</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}

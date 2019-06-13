@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  New Speech
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="">Back</a>
+{% endblock %}
+
+{% block content %}
+<form action="" class="app-c-contextual-guidance__form">
+  <h1 class="govuk-heading-l">New transcript</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
+          Speaker
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text" data-contextual-guidance="speaker-guidance">
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-c-contextual-guidance__wrapper" id="speaker-guidance" data-module="contextual-guidance">
+          <div class="app-c-contextual-guidance">
+            <h2 class="govuk-heading-s">contextual guidance</h2>
+            <p class="govuk-body">guidance</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    {% include "includes/time-date-component-filled.html" %}
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row govuk-!-margin-bottom-6">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
+          Location
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text" data-contextual-guidance="location-guidance">
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <div class="app-c-contextual-guidance__wrapper" id="location-guidance" data-module="contextual-guidance">
+          <div class="app-c-contextual-guidance">
+            <h2 class="govuk-heading-s">location guidance</h2>
+            <p class="govuk-body">guidance</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">      
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group govuk-!-margin-bottom-8">
+          <label class="govuk-label govuk-!-font-weight-bold" for="title">
+            Title
+          </label>
+          <textarea class="govuk-textarea" id="title" name="title" rows="2" aria-describedby="more-detail-hint" data-contextual-guidance="title-guidance"></textarea>
+        </div>
+
+        <div class="govuk-inset-text govuk-!-margin-bottom-8">
+          <span class="govuk-!-font-weight-bold">Page address</span> <br />
+          You haven't entered a title yet.
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+      <div class="app-c-contextual-guidance__wrapper" id="title-guidance" data-module="contextual-guidance">
+        <div class="app-c-contextual-guidance">
+          <h2 class="govuk-heading-s">Title</h2>
+          <p class="govuk-body">The title should be unique and specific. It must make clear what the content offers users. Use the words your users do to help them find this. Avoid wordplay or teases.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">      
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="summary">
+            Summary
+          </label>
+          <textarea class="govuk-textarea govuk-!-margin-bottom-0" id="summary" name="summary" rows="4" aria-describedby="more-detail-hint" data-contextual-guidance="summary-guidance"></textarea>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="app-c-contextual-guidance__wrapper" id="summary-guidance" data-module="contextual-guidance">
+          <div class="app-c-contextual-guidance">
+            <h2 class="govuk-heading-s">Summary</h2>
+            <p class="govuk-body">The summary should explain the main point of the story. It is the first line of the story so don’t repeat it in the body and end with a full stop.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="govuk-grid-row">      
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-form-group">
+          <div class="preview-toggle">
+            <a href="" class="active">Edit markdown</a><a href="">Preview markdown</a>
+          </div>
+          <div class="markdown-editor">
+            <a href="#"><img src="/public/images/heading-two.svg" alt=""></a>
+            <a href=""><img src="/public/images/heading-three.svg" alt=""></a>
+            <a href=""><img src="/public/images/link.svg" alt=""></a>
+            <a href=""><img src="/public/images/blockquote.svg" alt=""></a>
+            <a href=""><img src="/public/images/number-list.svg" alt=""></a>
+            <a href=""><img src="/public/images/bullet-point.svg" alt=""></a>
+            <div class="insert-dropdown">
+              <a href="">Insert ...</a>
+            </div>
+          </div>  
+          <label class="govuk-label govuk-!-font-weight-bold" for="body">
+            Body
+          </label>
+          <textarea class="govuk-textarea" id="body" name="body" rows="20" aria-describedby="body" data-contextual-guidance="body-guidance"></textarea>
+        </div>
+    </div>    
+    <div class="govuk-grid-column-one-third govuk-!-margin-top-6">
+      <div class="app-c-contextual-guidance__wrapper" id="body-guidance" data-module="contextual-guidance">
+        <div class="app-c-contextual-guidance govuk-!-margin-top-9">
+          <h2 class="govuk-heading-s">Writing a speech</h2>
+          <p class="govuk-body">Use short words, short sentences, and short paragraphs. Use subheadings in longer content. Avoid ‘notes to editors’.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row">      
+    <div class="govuk-grid-column-two-thirds">
+      <button class="govuk-button">Save</button>
+    </div>
+  </div>
+        
+</form>
+   
+{% endblock %}
