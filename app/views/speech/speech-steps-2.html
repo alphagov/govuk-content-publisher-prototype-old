@@ -9,21 +9,21 @@
 {% endblock %}
 
 {% block content %}
-<form action="" class="app-c-contextual-guidance__form">
-  <h1 class="govuk-heading-l">Speech details for ‘Title’</h1>
+<form action="/speech/content-summary-statement" class="app-c-contextual-guidance__form">
+  <h1 class="govuk-heading-l">Statement details for ‘Title’</h1>
   
   <div class="govuk-grid-row">      
     <div class="govuk-grid-column-two-thirds">
       
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--s" for="speech-type">
-            Speech type
+            Statement type
           </label>
           <select class="govuk-select" id="sort" name="sort" data-contextual-guidance="speech-type-guidance">
             <option value="nothing-selected"> </option>
-            <option value="transcript">Transcript</option>
-            <option value="draft-text">Draft text</option>
-            <option value="speaking-notes">Speaking notes</option>
+            <option value="transcript">Written statement to Parliament</option>
+            <option value="draft-text">Oral statement to Parliament</option>
+            <option value="speaking-notes">Authored article</option>
           </select>
         </div>
     </div>

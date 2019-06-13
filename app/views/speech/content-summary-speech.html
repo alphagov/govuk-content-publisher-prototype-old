@@ -1,0 +1,236 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  New news story
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Speech</span>
+      <h1 class="govuk-heading-l">
+        Title
+      </h2>
+    </div>
+  </div>
+
+
+<div class="govuk-tabs govuk-tabs-nobox" data-module="tabs">
+    
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#document-summary">
+        Document summary
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#document-history">
+        Document history
+      </a>
+    </li>
+  </ul>
+
+  <section class="govuk-tabs__panel" id="document-summary">  
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+      
+      <dl class="app-check-your-answers app-check-your-answers--short content-summary">
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders govuk-heading-m">
+            Speech type
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            Transcript
+           </dd>
+           <dd class="govuk-summary-list__actions">
+              <a class="govuk-link destructive-link--right" href="/speech/speech-long-form">
+                Change
+                <span class="govuk-visually-hidden">Speech type</span>
+              </a>
+            </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">
+        Content      
+        <span class="govuk-body destructive-link--right">
+          <a href="/speech/speech-long-form">
+            Change</span>
+          </a>
+        </span>
+      </h2>
+      <dl class="app-check-your-answers app-check-your-answers--short content-summary">
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Speaker
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            Firstname Lastname
+           </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Date and time
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            9.14am on 12 February 2019
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Location
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            none
+          </dd>
+        </div>
+
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Title
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Summary
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Body
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the...
+          </dd>
+        </div>
+
+      </dl>
+      <h2 class="govuk-heading-m">
+       Topics    
+        <span class="govuk-body destructive-link--right">
+          <a href="topics">
+            Change
+          </a>
+        </span>
+      </h2>
+      <dl class="app-check-your-answers app-check-your-answers--short govuk-!-margin-bottom-6">
+        <div class="app-check-your-answers__contents">
+          No topics selected
+        </div>
+      </dl>
+      <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6">
+      <h2 class="govuk-heading-m">
+       Tags    
+        <span class="govuk-body destructive-link--right">
+          <a href="tags">
+            Change
+          </a>
+        </span>
+      </h2>
+      <dl class="app-check-your-answers app-check-your-answers--short">
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Primary organisation
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            Department for Work and Pensions
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Organisations
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            none
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Ministers
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            none
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Topical events
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            none
+          </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            World locations
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            none
+          </dd>
+        </div>
+      </dl>
+
+<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6">
+      <h2 class="govuk-heading-m">
+       Content settings    
+      </h2>
+      <dl class="app-check-your-answers app-check-your-answers--short">
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Access limiting
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            None 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+              <a class="govuk-link destructive-link--right" href="access-limit">
+                Change
+                <span class="govuk-visually-hidden">Access limiting</span>
+              </a>
+            </dd>
+        </div>
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Backdate
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            No backdate
+          </dd>
+          <dd class="govuk-summary-list__actions">
+              <a class="govuk-link destructive-link--right" href="backdate">
+                Change
+                <span class="govuk-visually-hidden">Backdate</span>
+              </a>
+            </dd>
+        </div>
+      </dl>
+
+      </div>
+       
+     <div class="govuk-grid-column-one-third">
+       {% include "includes/action-block-draft.html" %}
+     </div>
+
+    </div>
+
+  </section>
+
+  <section class="govuk-tabs__panel" id="document-history"> 
+   <div class="govuk-grid-row"> 
+       {% include "includes/document-history.html" %}
+   </div>
+  </section> 
+
+</div>
+
+{% endblock %}
