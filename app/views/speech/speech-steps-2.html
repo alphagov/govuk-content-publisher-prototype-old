@@ -21,17 +21,23 @@
           </label>
           <select class="govuk-select" id="sort" name="sort" data-contextual-guidance="speech-type-guidance">
             <option value="nothing-selected"> </option>
-            <option value="transcript">Written statement to Parliament</option>
-            <option value="draft-text">Oral statement to Parliament</option>
             <option value="speaking-notes">Authored article</option>
+            <option value="draft-text">Oral statement to Parliament</option>
+            <option value="transcript">Written statement to Parliament</option>
           </select>
         </div>
     </div>
     <div class="govuk-grid-column-one-third">
       <div class="app-c-contextual-guidance__wrapper" id="speech-type-guidance" data-module="contextual-guidance">
         <div class="app-c-contextual-guidance">
-          <h2 class="govuk-heading-s">Speech type</h2>
-          <p class="govuk-body">etc</p>
+          <h2 class="govuk-heading-s">Authored article</h2>
+          <p class="govuk-body">Bylined articles written in the name of a minister or official, usually re-published from elsewhere.</p>
+          
+          <h2 class="govuk-heading-s">Oral statement to parliament</h2>
+          <p class="govuk-body">Very significant oral statements made to Parliament by a minister.</p>
+
+          <h2 class="govuk-heading-s">Written statement to parliament</h2>
+          <p class="govuk-body">Very significant written statements given to Parliament by a minister.</p>
         </div>
       </div>
     </div>
@@ -42,22 +48,15 @@
         <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
           Speaker
         </label>
-        <input class="govuk-input" id="event-name" name="event-name" type="text" data-contextual-guidance="speaker-guidance">
+        <input class="govuk-input" id="speaker-name" name="speaker-name" type="text" data-contextual-guidance="speaker-guidance">
       </div>
     </div>
-    <div class="govuk-grid-column-one-third">
-      <div class="app-c-contextual-guidance__wrapper" id="speaker-guidance" data-module="contextual-guidance">
-          <div class="app-c-contextual-guidance">
-            <h2 class="govuk-heading-s">contextual guidance</h2>
-            <p class="govuk-body">guidance</p>
-          </div>
-      </div>
-    </div>
+    
   </div>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-    {% include "includes/time-date-component-filled.html" %}
+    {% include "includes/time-date-component.html" %}
     </div>
   </div>
   
@@ -67,18 +66,11 @@
         <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
           Location
         </label>
-        <input class="govuk-input" id="event-name" name="event-name" type="text" data-contextual-guidance="location-guidance">
+        <input class="govuk-input" id="statement-location" name="statement-location" type="text" data-contextual-guidance="location-guidance">
       </div>
       <button class="govuk-button">Save</button>
     </div>
-    <div class="govuk-grid-column-one-third">
-      <div class="app-c-contextual-guidance__wrapper" id="location-guidance" data-module="contextual-guidance">
-          <div class="app-c-contextual-guidance">
-            <h2 class="govuk-heading-s">location guidance</h2>
-            <p class="govuk-body">guidance</p>
-          </div>
-      </div>
-    </div>
+    
   </div>
 </form>
 {% endblock %}

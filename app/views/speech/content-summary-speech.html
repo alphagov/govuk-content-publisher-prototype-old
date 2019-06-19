@@ -44,10 +44,10 @@
             Speech type
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            Transcript
+            Draft text
            </dd>
            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link destructive-link--right" href="/speech/speech-long-form">
+              <a class="govuk-link destructive-link--right" href="/speech/choose-speech-type">
                 Change
                 <span class="govuk-visually-hidden">Speech type</span>
               </a>
@@ -69,7 +69,7 @@
             Speaker
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            Firstname Lastname
+            {{ data['speaker-name'] }}
            </dd>
         </div>
         <div class="app-check-your-answers__contents">
@@ -85,7 +85,7 @@
             Location
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            none
+            {{ data['speech-location'] }}
           </dd>
         </div>
 
@@ -94,7 +94,7 @@
             Title
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            {{ data['title'] }}
           </dd>
         </div>
         <div class="app-check-your-answers__contents">
@@ -102,7 +102,7 @@
             Summary
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            {{ data['summary'] }} 
           </dd>
         </div>
         <div class="app-check-your-answers__contents">
@@ -110,7 +110,7 @@
             Body
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the...
+            {{ data['body'] }}
           </dd>
         </div>
 
