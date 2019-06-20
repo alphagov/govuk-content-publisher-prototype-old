@@ -11,7 +11,7 @@
     <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-xl">Speech</span>
       <h1 class="govuk-heading-l">
-        Title
+        {{ data['title'] }}
       </h2>
     </div>
   </div>
@@ -44,7 +44,7 @@
             Speech type
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            Draft text
+            Transcript
            </dd>
            <dd class="govuk-summary-list__actions">
               <a class="govuk-link destructive-link--right" href="/speech/choose-speech-type">
@@ -110,7 +110,8 @@
             Body
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            {{ data['body'] }}
+            I have just come from chairing seven hours of Cabinet meetings focused on finding a route out of the current impasse – one that will deliver the ...
+
           </dd>
         </div>
 
