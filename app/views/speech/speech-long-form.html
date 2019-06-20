@@ -18,7 +18,9 @@
         <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
           Speaker
         </label>
-        <input class="govuk-input" id="event-name" name="speaker-name" type="text" data-contextual-guidance="speaker-guidance">
+        <select class="govuk-select" id="primary-organisation" name="primary-organisation">
+            {% include "includes/speaker-data.html" %}
+          </select>
       </div>
     </div>
     

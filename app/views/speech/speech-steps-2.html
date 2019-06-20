@@ -30,13 +30,13 @@
     <div class="govuk-grid-column-one-third">
       <div class="app-c-contextual-guidance__wrapper" id="speech-type-guidance" data-module="contextual-guidance">
         <div class="app-c-contextual-guidance">
-          <h2 class="govuk-heading-s">Authored article</h2>
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Authored article</h2>
           <p class="govuk-body">Bylined articles written in the name of a minister or official, usually re-published from elsewhere.</p>
           
-          <h2 class="govuk-heading-s">Oral statement to parliament</h2>
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Oral statement to parliament</h2>
           <p class="govuk-body">Very significant oral statements made to Parliament by a minister.</p>
 
-          <h2 class="govuk-heading-s">Written statement to parliament</h2>
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Written statement to parliament</h2>
           <p class="govuk-body">Very significant written statements given to Parliament by a minister.</p>
         </div>
       </div>
@@ -48,8 +48,10 @@
         <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
           Speaker
         </label>
-        <input class="govuk-input" id="speaker-name" name="speaker-name" type="text" data-contextual-guidance="speaker-guidance">
-      </div>
+          <select class="govuk-select" id="primary-organisation" name="primary-organisation">
+            {% include "includes/speaker-data.html" %}
+          </select>      
+        </div>
     </div>
     
   </div>
@@ -64,7 +66,7 @@
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
-          Location
+          Speech location
         </label>
         <input class="govuk-input" id="statement-location" name="statement-location" type="text" data-contextual-guidance="location-guidance">
       </div>
