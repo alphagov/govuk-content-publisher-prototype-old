@@ -12,6 +12,13 @@ $(document).ready(function () {
   $('.notification').hover(function () { $('#modal').css('visibility', 'visible') })
 
   // Autocomplete
+  if ($('#speaker').length) {
+    window.accessibleAutocomplete.enhanceSelectElement({
+      defaultValue: '',
+      selectElement: document.querySelector('#speaker')
+    })
+  }
+
   if ($('#primary-organisation').length) {
     window.accessibleAutocomplete.enhanceSelectElement({
       defaultValue: '',

@@ -11,10 +11,10 @@
 {% block content %}
 <form action="/speech/content-summary-statement" class="app-c-contextual-guidance__form">
   <h1 class="govuk-heading-l">Statement details for ‘{{ data['title'] }}’</h1>
-  
-  <div class="govuk-grid-row">      
+
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      
+
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label--s" for="speech-type">
             Statement type
@@ -32,7 +32,7 @@
         <div class="app-c-contextual-guidance">
           <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Authored article</h2>
           <p class="govuk-body">Bylined articles written in the name of a minister or official, usually re-published from elsewhere.</p>
-          
+
           <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Oral statement to parliament</h2>
           <p class="govuk-body">Very significant oral statements made to Parliament by a minister.</p>
 
@@ -41,19 +41,18 @@
         </div>
       </div>
     </div>
-  </div>  
+  </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
           Speaker
         </label>
-          <select class="govuk-select" id="primary-organisation" name="primary-organisation">
-            {% include "includes/speaker-data.html" %}
-          </select>      
-        </div>
+        <select class="govuk-select" id="speaker" name="speaker">
+          {% include "includes/speaker-data.html" %}
+        </select>
+      </div>
     </div>
-    
   </div>
 
   <div class="govuk-grid-row">
@@ -61,7 +60,7 @@
     {% include "includes/time-date-component.html" %}
     </div>
   </div>
-  
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
@@ -72,7 +71,7 @@
       </div>
       <button class="govuk-button">Save</button>
     </div>
-    
+
   </div>
 </form>
 {% endblock %}
