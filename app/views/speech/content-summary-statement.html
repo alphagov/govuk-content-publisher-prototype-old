@@ -9,7 +9,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-xl">Statement</span>
+    <span class="govuk-caption-xl">Speech</span>
       <h1 class="govuk-heading-l">
         {{ data['title'] }}
       </h2>
@@ -72,26 +72,17 @@
             Mr Speaker, with permission, I would like to make a statement on the current climate change protests and on our climate change policy. I apologise to Members...
           </dd>
         </div>
-
       </dl>
 
       <h2 class="govuk-heading-m">
        Statement details    
         <span class="govuk-body destructive-link--right">
-          <a href="/speech/speech-steps-2">
+          <a href="/speech/speech-steps-2-filled">
             Change
           </a>
         </span>
       </h2>
-      <dl class="app-check-your-answers app-check-your-answers--short content-summary">
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question no-borders">
-            Statement type
-          </dt>
-          <dd class="app-check-your-answers__answer no-borders">
-            Oral statement to parliament
-           </dd>
-        </div>
+      <dl class="app-check-your-answers app-check-your-answers--short">
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question no-borders">
             Speaker
@@ -102,19 +93,27 @@
         </div>
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question no-borders">
-            Date and time
+            Date
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
             2 April 2019
           </dd>
         </div>
+      </dl>
+      <dl class="app-check-your-answers app-check-your-answers--short govuk-!-margin-bottom-6 content-summary">
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question no-borders">
-            Location
+            Speech type
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            {{ data['statement-location'] }}
+            Transcript 
           </dd>
+          <dd class="govuk-summary-list__actions">
+              <a class="govuk-link destructive-link--right" href="choose-speech-type">
+                Change
+                <span class="govuk-visually-hidden">Speech type</span>
+              </a>
+            </dd>
         </div>
       </dl>
 
@@ -153,14 +152,6 @@
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question no-borders">
             Organisations
-          </dt>
-          <dd class="app-check-your-answers__answer no-borders">
-            none
-          </dd>
-        </div>
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question no-borders">
-            Ministers
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
             none
