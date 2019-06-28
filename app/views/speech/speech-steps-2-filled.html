@@ -19,37 +19,38 @@
         <label class="govuk-label govuk-!-font-weight-bold" for="speaker">
           Speaker
         </label>
-        <span id="event-name-hint" class="govuk-hint">Lead image is set to speaker profile. If the Speaker does not have a profile, the default image for the primary organisation will be used.</span>
-
         <select class="govuk-select" id="speaker" name="speaker">
           {% include "includes/speaker-data.html" %}
         </select>
       </div>
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
-          <div class="govuk-checkboxes" data-module="checkboxes">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="speaker-no-name-1" name="speaker" type="checkbox" data-aria-controls="conditional-speaker-no-name-1">
-              <label class="govuk-label govuk-checkboxes__label" for="speaker-no-name-1">
+              <input class="govuk-checkboxes__input" id="organisation-1" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="speaker-no-profile">
                 Speaker does not have profile on GOV.UK
               </label> 
             </div>
-            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-speaker-no-name-1">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-email">
-                  Speaker name and title (if appropriate)
-                </label>
-                <input class="govuk-input" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false">
-              </div>
-
-            </div>
+            
           </div>
         </fieldset>
       </div>
 
     </div>
   </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-inset-text govuk-!-margin-top-0">
+        <p>Lead image is set to speaker profile. If the Speaker does not have a profile, the default image for the primary organisation will be used.</p>
+
+        <img src="/public/images/number10.jpg" alt="" style="width: 50%">
+      </div>
+
+    </div>
+  </div> 
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
