@@ -54,7 +54,7 @@ router.post('/speech/choose-news-type', function (req, res) {
     res.redirect('/speech/choose-speech-type')
   } 
   if (speech === 'statement') {
-      res.redirect('/speech/speech-steps-1')
+      res.redirect('/speech/choose-statement-type')
     }
   else {
     res.redirect('/speech/choose-news-type')

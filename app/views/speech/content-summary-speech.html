@@ -11,7 +11,7 @@
     <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-xl">Speech</span>
       <h1 class="govuk-heading-l">
-        {{ data['title'] }}
+        Title {{ data['title'] }}
       </h2>
     </div>
   </div>
@@ -53,7 +53,7 @@
             Title
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            {{ data['title'] }}
+            Title {{ data['title'] }}
           </dd>
         </div>
         <div class="app-check-your-answers__contents">
@@ -61,7 +61,7 @@
             Summary
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
-            {{ data['summary'] }} 
+            Summary {{ data['summary'] }} 
           </dd>
         </div>
         <div class="app-check-your-answers__contents">
@@ -72,40 +72,17 @@
             Mr Speaker, with permission, I would like to make a statement on the current climate change protests and on our climate change policy. I apologise to Members...
           </dd>
         </div>
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question no-borders">
-            Speech type
-          </dt>
-          <dd class="app-check-your-answers__answer no-borders">
-            Transcript 
-          </dd>
-          <dd class="govuk-summary-list__actions">
-              <a class="govuk-link destructive-link--right" href="choose-speech-type">
-                Change
-                <span class="govuk-visually-hidden">Speech type</span>
-              </a>
-            </dd>
-        </div>
-
       </dl>
 
-     <!--  <h2 class="govuk-heading-m">
-       Statement details    
+      <h2 class="govuk-heading-m">
+       Speech details    
         <span class="govuk-body destructive-link--right">
-          <a href="/speech/speech-steps-2">
+          <a href="/speech/speech-steps-2-filled">
             Change
           </a>
         </span>
       </h2>
-      <dl class="app-check-your-answers app-check-your-answers--short content-summary">
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question no-borders">
-            Statement type
-          </dt>
-          <dd class="app-check-your-answers__answer no-borders">
-            Oral statement to parliament
-           </dd>
-        </div>
+      <dl class="app-check-your-answers app-check-your-answers--short">
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question no-borders">
             Speaker
@@ -123,7 +100,23 @@
           </dd>
         </div>
       </dl>
- -->
+      <dl class="app-check-your-answers app-check-your-answers--short govuk-!-margin-bottom-6 content-summary">
+        <div class="app-check-your-answers__contents">
+          <dt class="app-check-your-answers__question no-borders">
+            Speech type
+          </dt>
+          <dd class="app-check-your-answers__answer no-borders">
+            Transcript 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+              <a class="govuk-link destructive-link--right" href="choose-speech-type">
+                Change
+                <span class="govuk-visually-hidden">Speech type</span>
+              </a>
+            </dd>
+        </div>
+      </dl>
+
 
       <h2 class="govuk-heading-m">
        Topics    
@@ -159,22 +152,6 @@
         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question no-borders">
             Organisations
-          </dt>
-          <dd class="app-check-your-answers__answer no-borders">
-            none
-          </dd>
-        </div>
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question no-borders">
-            Speaker
-          </dt>
-          <dd class="app-check-your-answers__answer no-borders">
-            none
-          </dd>
-        </div>
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question no-borders">
-            Speech date
           </dt>
           <dd class="app-check-your-answers__answer no-borders">
             none
