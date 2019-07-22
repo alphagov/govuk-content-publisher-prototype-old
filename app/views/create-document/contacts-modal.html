@@ -45,9 +45,13 @@
 {% block beforeBodyEnd %}
   {% call appModalDialogue({ id: "modal-dialogue-contacts"}) %}
     <div class="govuk-form-group">
-      <label class="govuk-label govuk-label--l" for="primary-organisation">
-        Search contacts
+      <h2 class="govuk-heading--l">Insert contact address</h2>
+      <label class="govuk-label govuk-label--s" for="primary-organisation">
+        Search saved contact
       </label>
+      <span id="event-name-hint" class="govuk-hint">
+     Select a contact address from the GOV.UK contacts list
+      </span>
       <select class="govuk-select" id="primary-organisation" name="primary-organisation">
         <option value="dwp">Department for Work and Pension</option>
         <option value="hmlr" selected>Department for Transport</option>
@@ -73,8 +77,12 @@
     </div>
 
     <div class="actions">
-      <button class="govuk-button">Add contact</button>
+      <button class="govuk-button">Insert contact</button>
       <p><a href="">Edit or add new contact</a></p>
+      <span id="event-name-hint" class="govuk-hint">
+       //or if not a managing editor, use below: 
+      </span>
+      <p>If the contact you need is not available or is out of date, contact your managing editor. <a href="">Full guidance on adding or editing contacts</a>.</p>
     </div>
   {% endcall %}
 {% endblock %}
