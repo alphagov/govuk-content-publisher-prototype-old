@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Attachments
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="">Back to Content Summary</a>
+{% endblock %}
+
+{% block content %}
+<form action="" class="app-c-contextual-guidance__form">
+
+  <h1 class="govuk-heading-l">Attachments for ‘Title’</h1>
+
+  <div class="govuk-grid-row">      
+    <div class="govuk-grid-column-two-thirds">
+        <button type="submit" class="govuk-button govuk-!-margin-right-2" data-module="govuk-button">
+          HTML attachment
+        </button>
+        <button type="submit" class="govuk-button govuk-!-margin-right-2" data-module="govuk-button">
+          File attachment
+        </button>
+        <button type="submit" class="govuk-button govuk-!-margin-right-2" data-module="govuk-button">
+          External attachment
+        </button>
+
+        <p>
+          <a class="govuk-!-margin-right-2" href="html-attachment">Create HTML attachment</a>
+          <a class="govuk-!-margin-right-2" href="file-attachment">Upload file attachment</a>
+          <a href="external-attachment">Add external attachment</a>
+        </p>
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Other attachments</h2>      
+
+    </div>  
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <div class="action-block govuk-!-margin-bottom-4">
+        <img src="/public/images/file-attachment-icon.png" alt="" class="attachment-icon">    
+        <div class="">
+          <p class="govuk-!-font-size-27 govuk-!-margin-bottom-2"><a href="">A title that will probably be long</a></p>
+          <p class="govuk-!-font-size-14">PDF, 153KB, 5 pages</p>
+        </div>
+        <ul class="govuk-list attachment-links">
+          <li><a class="govuk-link" href="#">Preview</a></li>
+          <li><a class="govuk-link" href="#">Edit file</a></li>
+          <li><a class="govuk-link destructive-link" href="#">Delete attachment</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <p><a href="">&wedge; Move up</a></p>
+      <p><a href="">&vee; Move down</a></p>
+    </div>
+  </div>
+  
+  <div class="govuk-grid-row"> 
+
+  <div class="govuk-grid-column-two-thirds">
+      <div class="action-block">
+        <img src="/public/images/file-attachment-icon.png" alt="" class="attachment-icon">    
+        <div class="">
+          <p class="govuk-!-font-size-27 govuk-!-margin-bottom-2"><a href="">A title that will probably be long and may be 2 lines</a></p>
+          <p class="govuk-!-font-size-14">PDF, 153KB, 5 pages</p>
+        </div>
+        <ul class="govuk-list attachment-links">
+          <li><a class="govuk-link" href="#">Preview</a></li>
+          <li><a class="govuk-link" href="#">Edit file</a></li>
+          <li><a class="govuk-link destructive-link" href="#">Delete attachment</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <p><a href="">&wedge; Move up</a></p>
+      <p><a href="">&vee; Move down</a></p>
+
+    </div>
+  </div>
+
+</form>
+{% endblock %}
