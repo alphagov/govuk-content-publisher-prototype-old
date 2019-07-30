@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  New publications
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="">Back</a>
+{% endblock %}
+
+{% block content %}
+<form action="" class="app-c-contextual-guidance__form">
+
+  <h1 class="govuk-heading-l">Attachment details</h1>
+
+  <div class="govuk-grid-row">      
+    <div class="govuk-grid-column-two-thirds">
+      <p>
+        Some guidance here? 
+      </p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+          Print ISBN
+        </label>
+        <span id="event-name-hint" class="govuk-hint">
+          Do we want to have guidance or contextual guidance?
+        </span>
+        <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-font-weight-bold" for="event-name">
+          Web ISBN
+        </label>
+         <span id="event-name-hint" class="govuk-hint">
+          The publishing guidance for these fields is super confusing, maybe we should have contextual guidance so it’s “at the point of need”
+        </span>
+        <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+      </div>
+
+      <a href="#" role="button" class="govuk-button govuk-!-margin-top-4">Save and continue</a>
+      <p><a href="attachments-index">Save and add another attachment</a></p>
+        
+    </div>
+  </div>
+
+  
+
+</form>
+{% endblock %}
