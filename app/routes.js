@@ -55,7 +55,7 @@ router.post('/document-types/what-is-content-for', function (req, res) {
     res.redirect('/document-types/choose-news-type')
   } 
   if (supertype === 'guidance-schema') {
-      res.redirect('/document-types/choose-guidance-type')
+      res.redirect('/document-types/choose-guidance-regulation-type')
     }
   if (supertype === 'transparency-statistics-schema') {
       res.redirect('/document-types/choose-transparency-statistics-type')
@@ -87,5 +87,22 @@ router.post('/document-types/choose-news-type', function (req, res) {
     }      
   else {
     res.redirect('/document-types/choose-news-type')
+  }
+})
+
+
+// Guidance types 
+router.post('/document-types/choose-guidance-regulation-type', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  let guidance = req.session.data['guidance-type']
+
+  if (guidance === 'guidance') {
+    res.redirect('/document-types/choose-guidance-type')
+  }       
+  else {
+    res.redirect('/publication/new-publication')
   }
 })
