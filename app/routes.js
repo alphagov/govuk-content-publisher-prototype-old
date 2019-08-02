@@ -41,9 +41,35 @@ router.post('/schedule', function (req, res) {
   }
 })
 
+// Choosing document types //
 
-// Speech or statement 
-router.post('/speech/choose-news-type', function (req, res) {
+// Supergroups 
+router.post('/document-types/what-is-content-for', function (req, res) {
+  // Get the answer from session data
+  // The name between the quotes is the same as the 'name' attribute on the input elements
+  // However in JavaScript we can't use hyphens in variable names
+
+  let supertype = req.session.data['choose-supertype']
+
+  if (supertype === 'news-schema') {
+    res.redirect('/document-types/choose-news-type')
+  } 
+  if (supertype === 'guidance-schema') {
+      res.redirect('/document-types/choose-guidance-type')
+    }
+  if (supertype === 'transparency-statistics-schema') {
+      res.redirect('/document-types/choose-transparency-statistics-type')
+    }
+  if (supertype === 'policy-schema') {
+    res.redirect('/document-types/choose-policy-type')
+  }  
+  else {
+    res.redirect('/document-types/what-is-content-for')
+  }
+})
+
+// News types 
+router.post('/document-types/choose-news-type', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
@@ -51,12 +77,12 @@ router.post('/speech/choose-news-type', function (req, res) {
   let speech = req.session.data['news-type']
 
   if (speech === 'speech') {
-    res.redirect('/speech/choose-speech-type')
+    res.redirect('/speech/speech-steps-1')
   } 
   if (speech === 'statement') {
-      res.redirect('/speech/choose-statement-type')
+      res.redirect('/document-types/choose-statement-type')
     }
   else {
-    res.redirect('/speech/choose-news-type')
+    res.redirect('/document-types/choose-news-type')
   }
 })

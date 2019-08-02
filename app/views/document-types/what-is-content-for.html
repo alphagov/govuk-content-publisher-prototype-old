@@ -12,7 +12,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form class="form" action="/speech/choose-news-type">
+      <form class="form" action="/document-types/what-is-content-for" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="choose-supertype-hint">
@@ -24,6 +24,7 @@
             
 
             <div class="govuk-radios govuk-radios--conditional" data-module="radios">                
+                
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="choose-supertype-1" name="choose-supertype" type="radio" value="news-schema" data-aria-controls="conditional-choose-supertype-1">
                   <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-1">
@@ -39,31 +40,43 @@
 
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="choose-supertype-2" name="choose-supertype" type="radio" value="guidance" aria-describedby="choose-supertype-2-item-hint">
+                <input class="govuk-radios__input" id="choose-supertype-2" name="choose-supertype" type="radio" value="guidance-schema" aria-describedby="choose-supertype-2-item-hint" data-aria-controls="conditional-choose-supertype-2">
                 <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-2">
                   Guidance 
-                </label> <span id="choose-supertype-2-item-hint" class="govuk-hint govuk-radios__hint">
+                </label> 
+                <span id="choose-supertype-2-item-hint" class="govuk-hint govuk-radios__hint">
                   To help the user do something or understand what they need to do
-                </span> </div>
+                </span> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-choose-supertype-2">
+                <p class="govuk-body">For example, manuals, or statutory guidance</p>
+              </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="choose-supertype-3" name="choose-supertype" type="radio" value="govuk-verify" aria-describedby="choose-supertype-3-item-hint">
+                <input class="govuk-radios__input" id="choose-supertype-3" name="choose-supertype" type="radio" value="transparency-statistics-schema" aria-describedby="choose-supertype-3-item-hint" data-aria-controls="conditional-choose-supertype-3">
                 <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-3">
                   Transparency and statistics 
                 </label> <span id="choose-supertype-3-item-hint" class="govuk-hint govuk-radios__hint">
                   To provide information that helps users hold government to account 
-                </span> </div>
+                </span> 
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-choose-supertype-3">
+              <p class="govuk-body">For example, statistics, FOI data, or reports</p>
+              </div>
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="choose-supertype-4" name="choose-supertype" type="radio" value="transparency-statistics" aria-describedby="choose-supertype-4-item-hint">
+                <input class="govuk-radios__input" id="choose-supertype-4" name="choose-supertype" type="radio" value="policy-schema" aria-describedby="choose-supertype-4-item-hint" data-aria-controls="conditional-choose-supertype-4">
                 <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-4">
                   Policy or consultation 
                 </label> <span id="choose-supertype-4-item-hint" class="govuk-hint govuk-radios__hint">
                   To explain the government’s position or request views or evidence on an issue
                 </span> </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-choose-supertype-4">
+                  <p class="govuk-body">For example, policy papers, impact assessments, or case studies</p>
+                </div>
               
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="choose-supertype-5" name="choose-supertype" type="radio" value="policy-consultation" aria-describedby="choose-supertype-5-item-hint">
+                <input class="govuk-radios__input" id="choose-supertype-5" name="choose-supertype" type="radio" value="policy-consultation" aria-describedby="choose-supertype-5-item-hint" data-aria-controls="conditional-choose-supertype-5">
                 <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-5">
                   Document collection 
                 </label> <span id="choose-supertype-5-item-hint" class="govuk-hint govuk-radios__hint">
@@ -77,6 +90,7 @@
                 </label> <span id="choose-supertype-6-item-hint" class="govuk-hint govuk-radios__hint">
                   Information about your organisation
                 </span> </div>
+                
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="choose-supertype-7" name="choose-supertype" type="radio" value="corporate-information" aria-describedby="choose-supertype-7-item-hint">
                 <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-supertype-7">

@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  News
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/document-types/what-is-content-for">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/publication/new-publication" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="choose-document-type-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Guidance
+              </h1>
+            </legend>    
+
+            <div class="govuk-radios" data-module="radios">
+          
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-document-type-1" name="guidance-type" type="radio" value="guidance" data-aria-controls="conditional-choose-document-type-1">
+                  <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-1">
+                    Guidance
+                  </label> 
+                  <span id="choose-document-type-1-item-hint" class="govuk-hint govuk-radios__hint">
+                    Guidance help text, includes statuatory guidance and guidance
+                  </span> 
+                </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-2" name="guidance-type" type="radio" value="notice" aria-describedby="choose-document-type-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-2">
+                  Notice
+                </label> <span id="choose-document-type-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Permit and license applications published temporarily for public awareness
+                </span> </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-3" name="guidance-type" type="radio" value="regulation" aria-describedby="choose-document-type-3-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-3">
+                  Regulation
+                </label> <span id="choose-document-type-3-item-hint" class="govuk-hint govuk-radios__hint">
+                  Regulations imposed by an independent regulatory authority.
+                </span> </div>
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-4" name="guidance-type" type="radio" value="form" aria-describedby="choose-document-type-4-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-4">
+                  Form
+                </label> <span id="choose-document-type-4-item-hint" class="govuk-hint govuk-radios__hint">
+                  Form documents that need to be completed by the users.
+                </span> </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-5" name="guidance-type" type="radio" value="map" aria-describedby="choose-document-type-5-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-5">
+                  Map
+                </label> <span id="choose-document-type-5-item-hint" class="govuk-hint govuk-radios__hint">
+                  Drawn maps and geographical data
+                </span> </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+        
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

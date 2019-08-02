@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  News
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/document-types/what-is-content-for">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/publication/new-publication" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="choose-document-type-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Policy or consultations
+              </h1>
+            </legend>    
+
+            <div class="govuk-radios" data-module="radios">
+          
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="choose-document-type-1" name="guidance-type" type="radio" value="policy-paper" data-aria-controls="conditional-choose-document-type-1">
+                  <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-1">
+                    Policy paper
+                  </label> 
+                  <span id="choose-document-type-1-item-hint" class="govuk-hint govuk-radios__hint">
+                    A policy paper explains the government's position on something. It doesn’t include instructions on how to carry out a task, only the policy itself and how it’ll be implemented.
+                  </span> 
+                </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-2" name="guidance-type" type="radio" value="impact-assessment" aria-describedby="choose-document-type-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-2">
+                  Impact Assessment
+                </label> <span id="choose-document-type-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Cost-benefit analyses and other assessments of the impact of proposed initiatives, or changes to regulations or legislation.
+                </span> </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="choose-document-type-5" name="guidance-type" type="radio" value="decision" aria-describedby="choose-document-type-5-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="choose-document-type-5">
+                  Decision
+                </label> <span id="choose-document-type-5-item-hint" class="govuk-hint govuk-radios__hint">
+                  Formal decisions by tribunals, regulators or adjudicators (including courts and Secretaries of State).
+                </span> </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+        
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
