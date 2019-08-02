@@ -82,6 +82,9 @@ router.post('/document-types/choose-news-type', function (req, res) {
   if (speech === 'statement') {
       res.redirect('/document-types/choose-statement-type')
     }
+  if (speech === 'correspondence') {
+      res.redirect('/publication/new-publication')
+    }      
   else {
     res.redirect('/document-types/choose-news-type')
   }
