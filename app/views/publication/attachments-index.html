@@ -5,7 +5,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="content-summary-publication">Back to Content Summary</a>
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="content-summary-publication">Content summary</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" aria-current="page">Attachments</a>
+    </li>
+  </ol>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -19,7 +28,7 @@
           HTML attachment
         </button>
 
-        <a href="html-attachment" role="button" class="govuk-button secondary-button govuk-!-margin-right-2">File attachment</a>
+        <a href="file-attachment" role="button" class="govuk-button secondary-button govuk-!-margin-right-2">File attachment</a>
         <a href="external-attachment" role="button" class="govuk-button secondary-button">External attachment</a>
 
         <h2 class="govuk-heading-m govuk-!-margin-top-6">All attachments</h2>      
@@ -80,7 +89,7 @@
       </div>
     </li>
   </ul>
-
+  <a href="" role="button" class="govuk-button">Save attachment order</a>
 </form>
 {% endblock %}
 

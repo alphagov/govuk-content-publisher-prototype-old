@@ -5,7 +5,17 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="">Back</a>
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="content-summary-publication">Content summary</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="attachments-index">Attachments</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item" aria-current="page">HTML Attachment</li>
+  </ol>
+</div>
 {% endblock %}
 
 {% block content %}
