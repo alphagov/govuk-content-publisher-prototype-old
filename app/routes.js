@@ -84,7 +84,10 @@ router.post('/document-types/choose-news-type', function (req, res) {
     }
   if (speech === 'articles') {
       res.redirect('/document-types/choose-article-type')
-    }      
+    }
+  if (speech === 'decision') {
+    res.redirect('/publication/new-publication')
+  }      
   else {
     res.redirect('/document-types/choose-news-type')
   }
