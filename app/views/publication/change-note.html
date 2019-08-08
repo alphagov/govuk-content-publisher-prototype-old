@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Change note
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="content-summary-publication">Content summary</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" aria-current="page">Change note</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="content-summary-publication">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changenote-conditional-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+             Is the content change significant to users?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changenote-conditional" name="changenote" type="radio" value="yes" data-aria-controls="conditional-changenote-conditional">
+              <label class="govuk-label govuk-radios__label" for="changenote-conditional">
+                Yes - information has been added or updated
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-changenote-conditional">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="public-change-note">
+                  Public change note
+                </label>
+                  <textarea class="govuk-textarea" id="significant-change" name="change-note" rows="5" aria-describedby="more-detail-hint"></textarea>
+              </div>
+            </div>
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changenote-conditional-2" name="changenote" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changenote-conditional-2">
+                No - a minor style update 
+              </label>
+            </div>
+
+            </div>
+
+            </div>
+          </div>
+
+
+
+        </fieldset>
+        
+      </div>
+
+      <button class="govuk-button">Save change note</button>
+    </form> 
+  </div>
+</div> 
+
+{% endblock %}
+
